@@ -59,9 +59,7 @@ body {
     display: block;
 }
 
-
-
-/* TEXTO SOBRE LA IMAGEN */
+/* Texto sobre la imagen */
 
 .texto-encabezado {
     position: absolute;
@@ -125,12 +123,11 @@ body {
 }
 
 
-/* EFECTO AL PASAR EL CURSOR */
+/* Efecto al pasar el cursor */
 
 .nav-links a:hover {
     opacity: 0.65;
 }
-
 
 @media (max-width: 700px) {
 
@@ -143,7 +140,6 @@ body {
         flex-direction: column;
         gap: 10px;
     }
-
 
     .nav-links {
         gap: 18px;
@@ -238,9 +234,6 @@ main {
 /* PRIMER IMAGEN PRIMER IMAGEN PRIMER IMAGEN PRIMER IMAGEN */
 
 
-
-
-
 /* TEXTO DE INVITACIÓN TEXTO DE INVITACIÓN TEXTO DE INVITACIÓN TEXTO DE INVITACIÓN */
 
 .texto-invitacion {
@@ -263,8 +256,7 @@ main {
     animation: subir 1.5s ease-out forwards;
 }
 
-
-/* PALABRAS EN BRITTANY SIGNATURE */
+/* Palabras en Brittany Signature  */
 
 .fuente-brittany {
     font-family: "Brittany Signature", cursive;
@@ -276,10 +268,218 @@ main {
     color: #548235;
 }
 
-
 /* TEXTO DE INVITACIÓN TEXTO DE INVITACIÓN TEXTO DE INVITACIÓN TEXTO DE INVITACIÓN */
 
 
+/* CARRUSEL CARRUSEL CARRUSEL CARRUSEL CARRUSEL CARRUSEL */
+
+.carrusel {
+    width: 100%;
+    max-width: 900px;
+    margin: 80px auto 0;
+    overflow: hidden;
+}
+
+.carrusel-fotos {
+    display: flex;
+    width: 400%;
+
+    animation: deslizarFotos 16s infinite;
+}
+
+.carrusel-fotos img {
+    width: 25%;
+    height: auto;
+
+    object-fit: cover;
+    display: block;
+}
 
 
+/* Animacion del carrusel */
+
+@keyframes deslizarFotos {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    45% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    70% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-75%);
+    }
+
+    95% {
+        transform: translateX(-75%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* CARRUSEL CARRUSEL CARRUSEL CARRUSEL CARRUSEL CARRUSEL */
+
+
+/* CUENTA REGRESIVA CUENTA REGRESIVA CUENTA REGRESIVA CUENTA REGRESIVA */
+
+.cuenta-seccion {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 100px auto 0;
+    padding: 0 25px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    color: #548235;
+
+    animation: flotarArriba 1.5s ease-out both;
+}
+
+
+/* Texto introductorio */
+
+.texto-superior {
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    margin-bottom: 45px;
+}
+
+
+/* Fecha y hora */
+
+.info-bloque {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+
+.columna {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Numeros */
+
+.numero {
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 48px;
+    line-height: 1;
+
+    margin: 0;
+}
+
+
+/* Abril y Hora */
+
+.fecha-brittany {
+    font-family: "Brittany Signature", cursive;
+
+    color: #548235;
+
+    font-size: 40px;
+    line-height: 0.8;
+
+    margin-top: 8px;
+}
+
+
+/* Divisor */
+
+.divisor {
+    width: 1.5px;
+
+    height: 90px;
+
+    background-color: #548235;
+
+    margin: 0 20px;
+}
+
+
+/* Cuenta regresiva */
+
+.contador {
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 36px;
+
+    letter-spacing: 1.5px;
+
+    margin-top: 15px;
+
+    white-space: nowrap;
+}
+
+
+/* Responsivo */
+
+@media (max-width: 480px) {
+
+    .cuenta-seccion {
+        padding: 0 15px;
+        margin-top: 80px;
+    }
+
+    .texto-superior {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .numero {
+        font-size: 38px;
+    }
+
+    .fecha-brittany {
+        font-size: 30px;
+    }
+
+    .divisor {
+        height: 70px;
+        margin: 0 15px;
+    }
+
+    .contador {
+        font-size: 26px;
+        letter-spacing: 1px;
+    }
+}
+
+/* CUENTA REGRESIVA CUENTA REGRESIVA CUENTA REGRESIVA CUENTA REGRESIVA */
 
