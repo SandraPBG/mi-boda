@@ -254,6 +254,7 @@ main {
 
     opacity: 0;
     animation: subir 1.5s ease-out forwards;
+    
 }
 
 /* Palabras en Brittany Signature  */
@@ -355,7 +356,7 @@ main {
 
     color: #548235;
 
-    animation: flotarArriba 1.5s ease-out both;
+    animation: subir 1.5s ease-out both;
 }
 
 
@@ -483,3 +484,258 @@ main {
 
 /* CUENTA REGRESIVA CUENTA REGRESIVA CUENTA REGRESIVA CUENTA REGRESIVA */
 
+
+
+
+/* UBICACIÓN UBICACIÓN UBICACIÓN UBICACIÓN UBICACIÓN UBICACIÓN */
+
+
+.ubicacion {
+    width: 90%;
+    max-width: 550px;
+
+    /* Espacio entre la cuenta regresiva y ubicacion */
+    margin: 180px auto 0;
+
+    padding: 0 10px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    color: #548235;
+
+    animation: flotarArriba 1.5s ease-out both;
+}
+
+
+/* Titulo ubicacion del lugar */
+
+.ubicacion-titulo {
+    text-align: center;
+
+    color: #548235;
+
+    margin-bottom: 45px;
+}
+
+
+/* Ubicacion del */
+
+.ubicacion-titulo-principal {
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: clamp(16px, 4vw, 20px);
+
+    font-weight: normal;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    line-height: 1.1;
+}
+
+
+/* Lugar */
+
+.ubicacion-titulo-brittany {
+    font-family: "Brittany Signature", cursive;
+
+    color: #548235;
+
+    font-size: clamp(30px, 8vw, 40px);
+
+    font-weight: normal;
+
+    line-height: 1;
+
+    margin-top: 8px;
+}
+
+
+/* Icono de ubicacion*/
+
+.icono-ubicacion {
+    width: clamp(60px, 18vw, 85px);
+
+    margin: 0 auto 45px;
+
+    color: #C46224;
+}
+
+
+/* SVG */
+
+.icono-ubicacion svg {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 2.8;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+
+/* Animacion del pin */
+
+.floating-pin {
+
+    animation: moverPin 2s ease-in-out infinite alternate;
+
+    transform-box: fill-box;
+
+    transform-origin: center;
+}
+
+
+@keyframes moverPin {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+/* Corazon */
+
+.corazon-trazo {
+    stroke-width: 2.2 !important;
+}
+
+
+/* Información de la ubicación */
+
+.datos-ubicacion {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    width: 100%;
+
+    color: #548235;
+
+    font-family: "Times New Roman", Times, serif;
+
+    text-align: center;
+}
+
+
+/* CADA LÍNEA */
+
+.datos-ubicacion li {
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.5px;
+
+    font-weight: normal;
+}
+
+
+/* NOMBRE DEL LUGAR */
+
+.datos-ubicacion .destacado {
+
+    font-size: clamp(15px, 4vw, 18px);
+
+    font-weight: bold;
+
+    margin-bottom: 2px;
+}
+
+
+/* ==================================================
+   RESPONSIVO - CELULAR
+   ================================================== */
+
+@media (max-width: 480px) {
+
+    .ubicacion {
+
+        width: 95%;
+
+        /* En celular reducimos un poco el espacio */
+
+        margin-top: 120px;
+
+        padding: 0 5px;
+    }
+
+
+    .ubicacion-titulo {
+
+        margin-bottom: 35px;
+    }
+
+
+    .ubicacion-titulo-principal {
+
+        font-size: 17px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .ubicacion-titulo-brittany {
+
+        font-size: 34px;
+
+        margin-top: 7px;
+    }
+
+
+    .icono-ubicacion {
+
+        width: 70px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .datos-ubicacion {
+
+        gap: 4px;
+    }
+
+
+    .datos-ubicacion li {
+
+        font-size: 13.5px;
+    }
+
+
+    .datos-ubicacion .destacado {
+
+        font-size: 16px;
+    }
+
+}
+
+
+/* UBICACIÓN UBICACIÓN UBICACIÓN UBICACIÓN UBICACIÓN UBICACIÓN */
