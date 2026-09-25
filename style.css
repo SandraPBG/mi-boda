@@ -1044,4 +1044,610 @@ main {
 
 }
 
+
+/* Paleta de colores */
+
+.paleta-vestimenta {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    /* ESPACIO ENTRE LA DESCRIPCIÓN Y LA PALETA */
+
+    margin: 80px auto 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* Contenedor de las dos columnas */
+
+.paleta-flex {
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    width: 100%;
+
+}
+
+
+/* Cada columna */
+
+.paleta-seccion {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+/* Titulos ellas y ellos */
+
+.paleta-titulo {
+
+    font-family: "Brittany Signature", cursive;
+
+    color: #548235;
+
+    font-size: clamp(30px, 6vw, 42px);
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+
+}
+
+/* Cuadriculas */
+
+.colores-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 8px;
+
+    justify-content: center;
+
+}
+
+/* Circulos */
+
+.color-circulo {
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 50%;
+
+    box-sizing: border-box;
+
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.05);
+
+}
+
+
+/* Colores circulos */
+
+.c-negro {
+    background-color: #000000;
+}
+
+.c-verde-militar {
+    background-color: #484b1f;
+}
+
+.c-oliva-oscuro {
+    background-color: #555729;
+}
+
+.c-marron-chocolate {
+    background-color: #472d24;
+}
+
+
+.c-azul-petroleo {
+    background-color: #0b4f54;
+}
+
+.c-azul-marino {
+    background-color: #01242c;
+}
+
+.c-azul-acero {
+    background-color: #7293a7;
+}
+
+.c-gris-calido {
+    background-color: #b1aaab;
+}
+
+
+.c-verde-oscuro {
+    background-color: #163a2b;
+}
+
+.c-verde-pino {
+    background-color: #2b6141;
+}
+
+.c-verde-oliva {
+    background-color: #5f7e2d;
+}
+
+.c-verde-lima {
+    background-color: #8cb13b;
+}
+
+
+.c-frambuesa {
+    background-color: #b91a4d;
+}
+
+.c-ciruela {
+    background-color: #952467;
+}
+
+.c-fucsia {
+    background-color: #c52273;
+}
+
+.c-vino {
+    background-color: #540d0e;
+}
+
+
+.c-rojo-anaranjado {
+    background-color: #d13f1f;
+}
+
+.c-naranja-tostado {
+    background-color: #cb6824;
+}
+
+.c-amarillo-mostaza {
+    background-color: #ea9c24;
+}
+
+.c-melocoton-claro {
+    background-color: #f4be6e;
+}
+
+
+/* Responsivo */
+
+@media (max-width: 480px) {
+
+    .paleta-vestimenta {
+
+        margin-top: 60px;
+
+        width: 100%;
+
+    }
+
+
+    .paleta-flex {
+
+        gap: 15px;
+
+    }
+
+
+    .paleta-titulo {
+
+        font-size: 32px;
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .colores-grid {
+
+        gap: 5px;
+
+    }
+
+
+    .color-circulo {
+
+        width: 22px;
+
+        height: 22px;
+
+    }
+
+}
+
+
+/* Boton de codigo de vestimenta */
+
+.boton-vestimenta {
+
+    display: block;
+
+    width: 55%;
+    max-width: 300px;
+
+    margin: 70px auto 0;
+
+    padding: 10px 15px;
+
+    box-sizing: border-box;
+
+    background: transparent;
+
+    border: 1.5px solid #548235;
+
+    border-radius: 4px;
+
+    color: #548235;
+
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 16px;
+
+    font-weight: normal;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Efecto al tocar */
+
+.boton-vestimenta:hover {
+
+    background: #548235;
+
+    color: white;
+
+}
+
+
+/*Responsivo */
+
+@media (max-width: 480px) {
+
+    .boton-vestimenta {
+
+       width: 50%;
+    
+        margin-top: 60px;
+
+        padding: 9px 12px;
+
+        font-size: 15px;
+
+    }
+
+}
+
+
+
 /* CÓDIGO DE VESTIMENTA CÓDIGO DE VESTIMENTA CÓDIGO DE VESTIMENTA CÓDIGO DE VESTIMENTA */
+
+
+/* SUGERENCIA DE REGALO SUGERENCIA DE REGALO SUGERENCIA DE REGALO SUGERENCIA DE REGALO */
+
+.seccion-regalo {
+
+  width: 90%;
+  max-width: 600px;
+
+  margin: 80px auto 0;
+
+  padding: 20px 10px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  color: #548235;
+
+  animation: flotarArriba 1.5s ease-out both;
+}
+
+
+/* ==================================================
+   TÍTULO
+   ================================================== */
+
+.regalo-titulo {
+
+  text-align: center;
+
+  color: #548235;
+
+  margin-bottom: 35px;
+
+}
+
+
+.regalo-titulo-principal {
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: clamp(16px, 4vw, 20px);
+
+  font-weight: normal;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  line-height: 1.1;
+
+}
+
+
+.regalo-titulo-brittany {
+
+  font-family: "Brittany Signature", cursive;
+
+  color: #548235;
+
+  font-size: clamp(40px, 8vw, 56px);
+
+  font-weight: normal;
+
+  line-height: 1;
+
+  margin-top: 8px;
+
+}
+
+
+/* ==================================================
+   ICONO DE REGALO
+   ================================================== */
+
+.icono-regalo {
+
+  width: clamp(70px, 18vw, 85px);
+
+  margin: 0 auto 35px;
+
+  color: #C46224;
+
+}
+
+
+.icono-regalo svg {
+
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 2.5;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+
+}
+
+
+/* ==================================================
+   ANIMACIÓN DEL MOÑO
+   ================================================== */
+
+.bow-animation {
+
+  animation: moverMoño 2s ease-in-out infinite alternate;
+
+  transform-box: fill-box;
+
+  transform-origin: center;
+
+}
+
+
+@keyframes moverMoño {
+
+  from {
+
+    transform: translateY(0);
+
+  }
+
+  to {
+
+    transform: translateY(-5px);
+
+  }
+
+}
+
+
+/* ==================================================
+   TEXTO
+   ================================================== */
+
+.nota-regalo {
+
+  font-family: "Times New Roman", Times, serif;
+
+  color: #548235;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  max-width: 520px;
+
+  margin: 0 auto;
+
+}
+
+
+.nota-regalo p {
+
+  margin: 0 0 12px;
+
+}
+
+
+.nota-regalo p:last-child {
+
+  margin-bottom: 0;
+
+}
+
+
+/* ==================================================
+   BOTÓN SUGERENCIA DE REGALO
+   ================================================== */
+
+.boton-sugerencia {
+
+  display: block;
+
+  width: 55%;
+
+  max-width: 300px;
+
+  margin: 60px auto 0;
+
+  padding: 10px 15px;
+
+  box-sizing: border-box;
+
+  background: transparent;
+
+  border: 1.5px solid #548235;
+
+  border-radius: 4px;
+
+  color: #548235;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 16px;
+
+  font-weight: normal;
+
+  letter-spacing: 1px;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+
+}
+
+
+/* Efecto al pasar el cursor */
+
+.boton-sugerencia:hover {
+
+  background: #548235;
+
+  color: white;
+
+}
+
+
+/* ==================================================
+   RESPONSIVO PARA CELULAR
+   ================================================== */
+
+@media (max-width: 480px) {
+
+  .seccion-regalo {
+
+    width: 95%;
+
+    margin-top: 60px;
+
+    padding: 10px 5px;
+
+  }
+
+
+  .regalo-titulo {
+
+    margin-bottom: 25px;
+
+  }
+
+
+  .regalo-titulo-principal {
+
+    font-size: 17px;
+
+    letter-spacing: 1.5px;
+
+  }
+
+
+  .regalo-titulo-brittany {
+
+    font-size: 42px;
+
+  }
+
+
+  .icono-regalo {
+
+    width: 70px;
+
+    margin-bottom: 25px;
+
+  }
+
+
+  .nota-regalo {
+
+    font-size: 14px;
+
+    padding: 0 5px;
+
+  }
+
+
+  .boton-sugerencia {
+
+    width: 50%;
+
+    max-width: 200px;
+
+    margin-top: 45px;
+
+    padding: 9px 12px;
+
+    font-size: 15px;
+
+  }
+
+}
+/* SUGERENCIA DE REGALO SUGERENCIA DE REGALO SUGERENCIA DE REGALO SUGERENCIA DE REGALO */
