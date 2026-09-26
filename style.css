@@ -2890,3 +2890,337 @@ main {
 
 }
 
+
+/* CONFIRMACIÓN DE ASISTENCIA CONFIRMACIÓN DE ASISTENCIA CONFIRMACIÓN DE ASISTENCIA */
+
+.confirmacion-container {
+  text-align: center;
+  padding: 60px 20px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  max-width: 650px;
+  margin: 0 auto;
+
+  animation: confirmacionSubir 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes confirmacionSubir {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ==================================================
+   TÍTULOS
+   ================================================== */
+
+.confirmacion-titulo-principal {
+  font-family: 'Times New Roman', Times, serif;
+  color: #548235;
+  font-size: clamp(15px, 3vw, 20px);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.confirmacion-titulo-brittany {
+  font-family: "Brittany Signature", cursive;
+  color: #548235;
+  text-align: center;
+  font-size: clamp(40px, 6vw, 56px);
+  font-weight: normal;
+  line-height: 1;
+  margin: 5px 0 30px;
+
+  animation: confirmacionSubir 1.2s ease-out both;
+}
+
+
+/* ==================================================
+   ICONO CALENDARIO
+   ================================================== */
+
+.icono-calendario {
+  width: 85px;
+  height: auto;
+  display: block;
+  color: #C46224;
+  margin-bottom: 35px;
+}
+
+.icono-calendario svg {
+  width: 100%;
+  height: auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* ==================================================
+   ANIMACIÓN DE LA PALOMITA
+   ================================================== */
+
+.checkmark-group {
+  animation: pulse-check 3s infinite ease-in-out;
+  transform-origin: 73px 71px;
+}
+
+@keyframes pulse-check {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+}
+
+
+/* ==================================================
+   TEXTO
+   ================================================== */
+
+.bloque-nota {
+  color: #548235;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(14px, 3vw, 20px);
+  line-height: 1.5;
+  margin: 0 0 25px;
+  font-weight: normal;
+}
+
+
+/* ==================================================
+   SUBRAYADO ANIMADO
+   ================================================== */
+
+.frase-subrayada {
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  font-size: inherit;
+  color: #C46224;
+  text-align: center;
+
+  display: inline-block;
+
+  background-image: linear-gradient(
+    #C46224,
+    #C46224
+  );
+
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  background-position: left bottom;
+
+  padding-bottom: 3px;
+
+  animation:
+    subrayado-confirmacion
+    3s ease-in-out infinite;
+}
+
+@keyframes subrayado-confirmacion {
+
+  0% {
+    background-size: 0% 2px;
+    background-position: left bottom;
+  }
+
+  40% {
+    background-size: 100% 2px;
+    background-position: left bottom;
+  }
+
+  55% {
+    background-size: 100% 2px;
+    background-position: right bottom;
+  }
+
+  90%, 100% {
+    background-size: 0% 2px;
+    background-position: right bottom;
+  }
+}
+
+
+/* ==================================================
+   FECHA LÍMITE
+   ================================================== */
+
+.limite-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 35px;
+}
+
+.columna-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.divisor-vertical {
+  width: 1.5px;
+  background-color: #548235;
+  height: 90px;
+  margin: 0 30px;
+}
+
+.numero-grande {
+  color: #548235;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 54px;
+  line-height: 1;
+  margin: 0 0 4px;
+}
+
+.mes-texto {
+  color: #548235;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.frase-espera {
+  color: #548235;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 22px;
+  line-height: 1.3;
+  margin: 0;
+  text-align: center;
+}
+
+
+/* ==================================================
+   BOTÓN
+   ================================================== */
+
+.boton-confirmacion {
+  display: inline-block;
+  padding: 12px 28px;
+
+  background-color: #548235;
+  color: white;
+
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+
+  letter-spacing: 1.5px;
+  text-decoration: none;
+
+  border: 1px solid #548235;
+  border-radius: 2px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  animation: botonEntrada 1.5s ease-out 0.4s both;
+}
+
+.boton-confirmacion:hover {
+  background-color: transparent;
+  color: #548235;
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 15px rgba(84, 130, 53, 0.15);
+}
+
+.boton-confirmacion:active {
+  transform: scale(0.97);
+}
+
+@keyframes botonEntrada {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ==================================================
+   RESPONSIVO PARA CELULAR
+   ================================================== */
+
+@media (max-width: 480px) {
+
+  .confirmacion-container {
+    padding: 60px 10px 30px;
+    width: 95%;
+  }
+
+  .confirmacion-titulo-principal {
+    font-size: 18px;
+  }
+
+  .confirmacion-titulo-brittany {
+    font-size: 46px;
+    margin-bottom: 25px;
+  }
+
+  .icono-calendario {
+    width: 70px;
+    margin-bottom: 25px;
+  }
+
+  .bloque-nota {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .divisor-vertical {
+    height: 70px;
+    margin: 0 15px;
+  }
+
+  .numero-grande {
+    font-size: 42px;
+  }
+
+  .mes-texto {
+    font-size: 15px;
+  }
+
+  .frase-espera {
+    font-size: 18px;
+  }
+
+  .boton-confirmacion {
+    font-size: 14px;
+    padding: 11px 23px;
+  }
+}
