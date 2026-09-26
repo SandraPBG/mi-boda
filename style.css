@@ -2763,14 +2763,13 @@ main {
 
   .itinerario-container {
 
-    padding: 20px 8px 35px;
+    padding: 60px 8px 35px;
 
   }
 
   .itinerario-titulo {
 
-    font-size:
-      clamp(38px, 12vw, 50px);
+    font-size:clamp(38px, 12vw, 50px);
 
     margin-bottom:
       35px;
