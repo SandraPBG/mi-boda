@@ -1347,6 +1347,292 @@ main {
 
 
 
+/* ==================================================
+   LIGHTBOX
+   ================================================== */
+
+.lightbox-vestimenta {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: none;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: column;
+
+  background: rgba(0, 0, 0, 0.88);
+
+  padding: 20px;
+
+  box-sizing: border-box;
+}
+
+
+/* Cuando está abierto */
+
+.lightbox-vestimenta.activo {
+
+  display: flex;
+
+}
+
+
+/* ==================================================
+   CONTENEDOR PRINCIPAL
+   ================================================== */
+
+.lightbox-contenido {
+
+  width: 100%;
+
+  height: 80vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+
+}
+
+
+/* ==================================================
+   FOTO
+   ================================================== */
+
+.lightbox-foto-contenedor {
+
+  width: min(75vw, 700px);
+
+  height: 75vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+
+.lightbox-foto-contenedor img {
+
+  max-width: 100%;
+
+  max-height: 100%;
+
+  width: auto;
+
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 3px;
+
+  user-select: none;
+
+}
+
+
+/* ==================================================
+   FLECHAS
+   ================================================== */
+
+.lightbox-flecha {
+
+  width: 45px;
+
+  height: 45px;
+
+  flex-shrink: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 50px;
+
+  font-weight: 200;
+
+  line-height: 35px;
+
+  cursor: pointer;
+
+  padding: 0;
+
+  transition: opacity 0.2s ease;
+}
+
+
+.lightbox-flecha:hover {
+
+  opacity: 0.6;
+
+}
+
+
+/* ==================================================
+   BOTÓN CERRAR
+   ================================================== */
+
+.lightbox-cerrar {
+
+  position: absolute;
+
+  top: 15px;
+
+  right: 20px;
+
+  width: 45px;
+
+  height: 45px;
+
+  border: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 38px;
+
+  font-weight: 200;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+}
+
+
+/* ==================================================
+   INDICADORES
+   ================================================== */
+
+.lightbox-indicadores {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 10px;
+
+}
+
+
+.lightbox-punto {
+
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.45);
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+}
+
+
+.lightbox-punto.activo {
+
+  background: white;
+
+  transform: scale(1.3);
+
+}
+
+
+/* ==================================================
+   RESPONSIVO
+   ================================================== */
+
+@media (max-width: 480px) {
+
+  .boton-vestimenta {
+
+    width: 50%;
+
+    max-width: 200px;
+
+    margin-top: 45px;
+
+    padding: 9px 12px;
+
+    font-size: 15px;
+
+  }
+
+
+  .lightbox-vestimenta {
+
+    padding: 10px;
+
+  }
+
+
+  .lightbox-contenido {
+
+    height: 80vh;
+
+    gap: 3px;
+
+  }
+
+
+  .lightbox-foto-contenedor {
+
+    width: 80vw;
+
+    height: 70vh;
+
+  }
+
+
+  .lightbox-flecha {
+
+    width: 30px;
+
+    font-size: 40px;
+
+  }
+
+
+  .lightbox-cerrar {
+
+    top: 8px;
+
+    right: 10px;
+
+    font-size: 34px;
+
+  }
+
+}
+
+
+
+
+
 /* CÓDIGO DE VESTIMENTA CÓDIGO DE VESTIMENTA CÓDIGO DE VESTIMENTA CÓDIGO DE VESTIMENTA */
 
 
@@ -1367,7 +1653,7 @@ main {
 
   color: #548235;
 
-  animation: flotarArriba 1.5s ease-out both;
+  animation: subir 1.5s ease-out both;
 }
 
 
