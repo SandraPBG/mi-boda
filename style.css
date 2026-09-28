@@ -743,7 +743,7 @@ main {
 }
 
 .parrafo-vestimenta {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
     margin: 0 auto 14px;
     max-width: 540px;
@@ -1802,15 +1802,10 @@ main {
 .nota-regalo {
 
   font-family: "Times New Roman", Times, serif;
-
   color: #548235;
-
-  font-size: 16px;
-
+  font-size: 20px;
   line-height: 1.7;
-
   max-width: 520px;
-
   margin: 0 auto;
 
 }
@@ -1830,42 +1825,24 @@ main {
 }
 
 
-/* ==================================================
-   RESPONSIVO PARA CELULAR
-   ================================================== */
-
 @media (max-width: 480px) {
 
   .seccion-regalo {
-
     width: 95%;
-
     margin-top: 60px;
-
     padding: 10px 5px;
 
   }
 
-
   .icono-regalo {
-
     width: 70px;
-
     margin-bottom: 25px;
-
   }
-
 
   .nota-regalo {
-
-    font-size: 14px;
-
+    font-size: 18px;
     padding: 0 5px;
-
   }
-
-
-
 }
 /* SUGERENCIA DE REGALO SUGERENCIA DE REGALO SUGERENCIA DE REGALO SUGERENCIA DE REGALO */
 
@@ -2539,7 +2516,7 @@ main {
 .bloque-nota {
   color: #548235;
   font-family: 'Times New Roman', Times, serif;
-  font-size: clamp(14px, 3vw, 20px);
+  font-size: clamp(18px, 3vw, 20px);
   line-height: 1.5;
   margin: 0 0 25px;
   font-weight: normal;
@@ -2681,7 +2658,7 @@ main {
   }
 
   .bloque-nota {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
   }
