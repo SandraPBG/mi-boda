@@ -735,30 +735,17 @@ main {
 }
 
 
-/* Subtitulo vestimenta */
-
 .subtitulo-vestimenta {
-
-    font-size: 20px;
-
+    font-size: 23px;
     line-height: 1.3;
-
     letter-spacing: 0.5px;
-
     margin: 0 0 16px;
 }
 
-
-/* PÁRRAFOS */
-
 .parrafo-vestimenta {
-
-    font-size: 15px;
-
+    font-size: 18px;
     line-height: 1.6;
-
     margin: 0 auto 14px;
-
     max-width: 540px;
 }
 
@@ -788,15 +775,14 @@ main {
 
     .subtitulo-vestimenta {
 
-        font-size: 20px;
-
+        font-size: 21px;
         margin-bottom: 12px;
     }
 
 
     .parrafo-vestimenta {
 
-        font-size: 16px;
+        font-size: 18px;
         line-height: 1.5;
         padding: 0 5px;
     }
