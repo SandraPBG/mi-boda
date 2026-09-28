@@ -788,7 +788,7 @@ main {
 
     .subtitulo-vestimenta {
 
-        font-size: 18px;
+        font-size: 20px;
 
         margin-bottom: 12px;
     }
@@ -796,10 +796,8 @@ main {
 
     .parrafo-vestimenta {
 
-        font-size: 13.5px;
-
+        font-size: 16px;
         line-height: 1.5;
-
         padding: 0 5px;
     }
 
