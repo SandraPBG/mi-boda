@@ -1766,31 +1766,13 @@ main {
 /* CONFIRMACIÓN DE ASISTENCIA CONFIRMACIÓN DE ASISTENCIA CONFIRMACIÓN DE ASISTENCIA */
 
 
-
-
-
-
-
-
-
-/* ==========================================
-   CONTENEDOR GENERAL
-   ========================================== */
-
-
 .logo-container {
     width: 100%;
     min-height: 80vh;
-
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-
     padding: 20px;
-
-
     overflow: hidden;
     box-sizing: border-box;
 }
@@ -1798,70 +1780,53 @@ main {
 
 
 
-/* ==========================================
-   ENVOLTURA DEL LOGOTIPO
-   ========================================== */
-
-
+/* CONTENEDOR PRINCIPAL DEL LOGO */
 .logo-wrapper {
     position: relative;
 
 
-    display: flex;
-    flex-direction: column;
-
-
-    width: 100%;
-    max-width: 460px;
-
-
+    width: min(460px, 100%);
     margin: 0 auto;
 
 
     color: #548235;
-
-
     font-family: "Times New Roman", Times, serif;
 
 
     box-sizing: border-box;
+
+
+    /* Permite que todo el contenido se escale proporcionalmente */
+    container-type: inline-size;
 }
 
 
 
 
-/* ==========================================
-   BLOQUES DE TEXTO
-   ========================================== */
-
-
+/* BLOQUES DE NOMBRES */
 .name-block {
     display: flex;
     flex-direction: column;
-
-
     white-space: nowrap;
 }
 
 
 
 
-/* ==========================================
-   NOMBRE PRINCIPAL
-   ========================================== */
-
-
+/* NOMBRES PRINCIPALES */
 .main-name {
     font-family: "Times New Roman", Times, serif;
 
 
-    font-size: 72px;
+    /* 72px cuando el logo mide 460px */
+    font-size: 15.6522cqw;
 
 
     font-weight: normal;
 
 
-    letter-spacing: 1px;
+    /* 1px cuando el logo mide 460px */
+    letter-spacing: 0.2174cqw;
 
 
     line-height: 0.8;
@@ -1873,19 +1838,17 @@ main {
 
 
 
-/* ==========================================
-   APELLIDOS
-   ========================================== */
-
-
+/* APELLIDOS */
 .last-name {
     font-family: "Times New Roman", Times, serif;
 
 
-    font-size: clamp(0.75rem, 2.2vw, 1.1rem);
+    /* 18px cuando el logo mide 460px */
+    font-size: 3.9130cqw;
 
 
-    letter-spacing: 2px;
+    /* 2px cuando el logo mide 460px */
+    letter-spacing: 0.4348cqw;
 
 
     line-height: 1;
@@ -1897,15 +1860,16 @@ main {
 
 
 
-/* ==========================================
-   DIANA
-   ========================================== */
-
-
+/* DIANA */
 .diana {
     align-items: flex-start;
     text-align: left;
-    margin-left: 30px;
+
+
+    /* 30px cuando el logo mide 460px */
+    margin-left: 6.5217cqw;
+
+
     animation: juntarDiana 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
@@ -1913,85 +1877,87 @@ main {
 
 
 .diana .last-name {
-    margin-top: 4px;
-    padding-right: 4px;
+    /* 4px cuando el logo mide 460px */
+    margin-top: 0.8696cqw;
+
+
+    padding-right: 0.8696cqw;
 }
 
+
+
+
+/* CRISTIAN */
 .cristian {
     align-items: flex-end;
     text-align: right;
-    margin-top: 10px;
-    margin-right: 40px;
+
+
+    /* 10px cuando el logo mide 460px */
+    margin-top: 2.1739cqw;
+
+
+    /* 40px cuando el logo mide 460px */
+    margin-right: 8.6957cqw;
+
+
     animation: juntarCristian 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
+
+
+
 .cristian .last-name {
-    margin-top: 4px;
-    padding-right: 4px;
+    /* 4px cuando el logo mide 460px */
+    margin-top: 0.8696cqw;
+
+
+    padding-right: 0.8696cqw;
 }
 
 
 
-
-/* ==========================================
-   "Y" — BRITTANY SIGNATURE
-   ========================================== */
-
-
 .connector-y {
-
-
     font-family: "Brittany Signature", cursive;
-    font-size: 60px;
+
+
+    /* 60px cuando el logo mide 460px */
+    font-size: 13.0435cqw;
+
 
     font-weight: normal;
-    text-transform: lowercase;
     position: absolute;
 
-    /*
-       Acercamos la "y" a DIANA
-    */
+
+    /* Posición horizontal */
     right: 27%;
 
 
-    margin-top: -40px;
+    /* Subimos bastante la "y" */
+    top: -8.6957cqw;
+    margin-top: 0;
 
 
     z-index: 5;
-
-
     color: #548235;
 
 
     opacity: 0;
-
-
     animation: aparecerY 2s ease forwards 0.8s;
 }
 
 
 
-
-/* ==========================================
-   ANIMACIÓN DIANA
-   ========================================== */
-
-
+/* ANIMACIÓN DE DIANA */
 @keyframes juntarDiana {
-
-
     from {
         opacity: 0;
-
-
-        transform: translateX(-150px);
+        transform: translateX(-32.6087cqw);
     }
 
 
     to {
         opacity: 1;
-
-
         transform: translateX(0);
     }
 }
@@ -1999,26 +1965,16 @@ main {
 
 
 
-/* ==========================================
-   ANIMACIÓN CRISTIAN
-   ========================================== */
-
-
+/* ANIMACIÓN DE CRISTIAN */
 @keyframes juntarCristian {
-
-
     from {
         opacity: 0;
-
-
-        transform: translateX(150px);
+        transform: translateX(32.6087cqw);
     }
 
 
     to {
         opacity: 1;
-
-
         transform: translateX(0);
     }
 }
@@ -2026,14 +1982,8 @@ main {
 
 
 
-/* ==========================================
-   ANIMACIÓN "Y"
-   ========================================== */
-
-
+/* APARICIÓN DE LA "y" */
 @keyframes aparecerY {
-
-
     from {
         opacity: 0;
     }
@@ -2041,56 +1991,5 @@ main {
 
     to {
         opacity: 1;
-    }
-}
-
-
-
-
-/* ==========================================
-   RESPONSIVO
-   ========================================== */
-
-
-@media (max-width: 480px) {
-
-
-    .logo-container {
-        padding: 20px 10px;
-
-
-        justify-content: center;
-
-
-        align-items: center;
-    }
-
-
-    .logo-wrapper {
-        width: 100%;
-
-
-        max-width: 460px;
-
-
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    /*
-       Conservamos la misma composición
-       en celulares.
-    */
-
-
-    .cristian {
-        margin-top: -20px;
-    }
-
-
-    .connector-y {
-        right: 24%;
-        top: 5%;
     }
 }
