@@ -177,7 +177,7 @@ body {
         margin-bottom: 140px; 
     }
     .img-overlay {
-        bottom: -65%; /* Máximo desplazamiento hacia abajo */
+        bottom: -65%; 
     }
 }
 
@@ -1773,3 +1773,324 @@ main {
 
 
 
+/* ==========================================
+   CONTENEDOR GENERAL
+   ========================================== */
+
+
+.logo-container {
+    width: 100%;
+    min-height: 80vh;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    padding: 20px;
+
+
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+
+
+/* ==========================================
+   ENVOLTURA DEL LOGOTIPO
+   ========================================== */
+
+
+.logo-wrapper {
+    position: relative;
+
+
+    display: flex;
+    flex-direction: column;
+
+
+    width: 100%;
+    max-width: 460px;
+
+
+    margin: 0 auto;
+
+
+    color: #548235;
+
+
+    font-family: "Times New Roman", Times, serif;
+
+
+    box-sizing: border-box;
+}
+
+
+
+
+/* ==========================================
+   BLOQUES DE TEXTO
+   ========================================== */
+
+
+.name-block {
+    display: flex;
+    flex-direction: column;
+
+
+    white-space: nowrap;
+}
+
+
+
+
+/* ==========================================
+   NOMBRE PRINCIPAL
+   ========================================== */
+
+
+.main-name {
+    font-family: "Times New Roman", Times, serif;
+
+
+    font-size: 72px;
+
+
+    font-weight: normal;
+
+
+    letter-spacing: 1px;
+
+
+    line-height: 0.8;
+
+
+    margin: 0;
+}
+
+
+
+
+/* ==========================================
+   APELLIDOS
+   ========================================== */
+
+
+.last-name {
+    font-family: "Times New Roman", Times, serif;
+
+
+    font-size: clamp(0.75rem, 2.2vw, 1.1rem);
+
+
+    letter-spacing: 2px;
+
+
+    line-height: 1;
+
+
+    font-weight: normal;
+}
+
+
+
+
+/* ==========================================
+   DIANA
+   ========================================== */
+
+
+.diana {
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 30px;
+    animation: juntarDiana 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+
+
+
+.diana .last-name {
+    margin-top: 4px;
+    padding-right: 4px;
+}
+
+.cristian {
+    align-items: flex-end;
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 40px;
+    animation: juntarCristian 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.cristian .last-name {
+    margin-top: 4px;
+    padding-right: 4px;
+}
+
+
+
+
+/* ==========================================
+   "Y" — BRITTANY SIGNATURE
+   ========================================== */
+
+
+.connector-y {
+
+
+    font-family: "Brittany Signature", cursive;
+    font-size: 60px;
+
+    font-weight: normal;
+    text-transform: lowercase;
+    position: absolute;
+
+    /*
+       Acercamos la "y" a DIANA
+    */
+    right: 27%;
+
+
+    margin-top: -40px;
+
+
+    z-index: 5;
+
+
+    color: #548235;
+
+
+    opacity: 0;
+
+
+    animation: aparecerY 2s ease forwards 0.8s;
+}
+
+
+
+
+/* ==========================================
+   ANIMACIÓN DIANA
+   ========================================== */
+
+
+@keyframes juntarDiana {
+
+
+    from {
+        opacity: 0;
+
+
+        transform: translateX(-150px);
+    }
+
+
+    to {
+        opacity: 1;
+
+
+        transform: translateX(0);
+    }
+}
+
+
+
+
+/* ==========================================
+   ANIMACIÓN CRISTIAN
+   ========================================== */
+
+
+@keyframes juntarCristian {
+
+
+    from {
+        opacity: 0;
+
+
+        transform: translateX(150px);
+    }
+
+
+    to {
+        opacity: 1;
+
+
+        transform: translateX(0);
+    }
+}
+
+
+
+
+/* ==========================================
+   ANIMACIÓN "Y"
+   ========================================== */
+
+
+@keyframes aparecerY {
+
+
+    from {
+        opacity: 0;
+    }
+
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* ==========================================
+   RESPONSIVO
+   ========================================== */
+
+
+@media (max-width: 480px) {
+
+
+    .logo-container {
+        padding: 20px 10px;
+
+
+        justify-content: center;
+
+
+        align-items: center;
+    }
+
+
+    .logo-wrapper {
+        width: 100%;
+
+
+        max-width: 460px;
+
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /*
+       Conservamos la misma composición
+       en celulares.
+    */
+
+
+    .cristian {
+        margin-top: -20px;
+    }
+
+
+    .connector-y {
+        right: 24%;
+        top: 5%;
+    }
+}
