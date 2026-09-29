@@ -133,7 +133,38 @@ body {
 
 /* ENCABEZADO ENCABEZADO ENCABEZADO ENCABEZADO ENCABEZADO */
 
+.encabezado {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
 
+.encabezado img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Texto sobre la imagen */
+
+.texto-encabezado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.texto-encabezado h1 {
+    margin: 0;
+    font-size: 60px;
+}
+
+.texto-encabezado p {
+    font-size: 25px;
+}
 
 /* ENCABEZADO ENCABEZADO ENCABEZADO ENCABEZADO ENCABEZADO */
 
@@ -1730,27 +1761,35 @@ main {
 
 
 
-.encabezado {
+/* Contenedor al 100% de la pantalla */
+.header-container {
     width: 100%;
-    overflow: visible;
+    overflow: visible; /* Permite que la imagen sobresalga libremente */
+    /* Crea un espacio abajo en PC para que no se encime con lo que sigue */
     margin-bottom: 80px; 
 }
-.encabezado-imagenes {
+
+/* Envoltura de las imágenes */
+.images-wrapper {
     position: relative;
     width: 100%;
 }
+
+/* Imagen base (encabezado1): Ocupa toda la pantalla de lado a lado */
 .img-base {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.img-secundaria {
+/* --- TAMAÑO ORIGINAL (Pantallas grandes / PC) --- */
+/* La segunda imagen se mantiene superpuesta arriba */
+.img-overlay {
     position: absolute;
-    bottom: -15%; 
+    bottom: -15%; /* Superposición sutil en computadoras */
     left: 50%;
     transform: translateX(-50%);
-    border: 4px solid #ffffff;
+    border: 4px solid #ffffff; /* Borde blanco elegante */
     width: 45%; 
     max-width: 450px;
     height: auto;
@@ -1758,20 +1797,27 @@ main {
     z-index: 10;
 }
 
+/* --- TAMAÑO RESPONSIVO (Celulares y Tabletas) --- */
+/* Aquí la imagen baja drásticamente */
 @media (max-width: 768px) {
     .header-container {
+        /* Aumentamos el margen inferior para abrirle paso a la imagen que bajó */
         margin-bottom: 120px; 
     }
+    
     .img-overlay {
-        width: 75%; 
-        bottom: -80%; 
+        width: 75%; /* Se adapta al ancho del celular */
+        bottom: -80%; /* ¡MUCHO MÁS ABAJO! Sobresale casi por completo */
     }
 }
+
+/* Ajuste extremo para pantallas de celulares muy pequeños */
 @media (max-width: 480px) {
     .header-container {
         margin-bottom: 140px; 
     }
+
     .img-overlay {
-        bottom: -65%;
+        bottom: -65%; /* Máximo desplazamiento hacia abajo */
     }
 }
