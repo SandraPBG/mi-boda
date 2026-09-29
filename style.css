@@ -252,19 +252,13 @@ main {
 .texto-invitacion {
     font-family: "Times New Roman", Times, serif;
     color: #548235;
-
     font-size: 18px;
     line-height: 1.8;
-
     text-align: center;
-
     width: 90%;
     max-width: 850px;
-
-    margin: 80px auto 0;
-
+    margin: 1px auto 0;
     box-sizing: border-box;
-
     opacity: 0;
     animation: subir 1.5s ease-out forwards;
     
@@ -1766,9 +1760,9 @@ main {
 /* CONFIRMACIÓN DE ASISTENCIA CONFIRMACIÓN DE ASISTENCIA CONFIRMACIÓN DE ASISTENCIA */
 
 
-.logo-container {
+.logo-seccion {
     width: 100%;
-    min-height: 80vh;
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1777,218 +1771,105 @@ main {
     box-sizing: border-box;
 }
 
-
-
-
-/* CONTENEDOR PRINCIPAL DEL LOGO */
 .logo-wrapper {
     position: relative;
-
-
     width: min(460px, 100%);
     margin: 0 auto;
-
-
     color: #548235;
     font-family: "Times New Roman", Times, serif;
-
-
     box-sizing: border-box;
-
-
-    /* Permite que todo el contenido se escale proporcionalmente */
     container-type: inline-size;
 }
 
-
-
-
-/* BLOQUES DE NOMBRES */
 .name-block {
     display: flex;
     flex-direction: column;
     white-space: nowrap;
 }
 
-
-
-
-/* NOMBRES PRINCIPALES */
-.main-name {
+.nombre {
     font-family: "Times New Roman", Times, serif;
-
-
-    /* 72px cuando el logo mide 460px */
     font-size: 15.6522cqw;
-
-
     font-weight: normal;
-
-
-    /* 1px cuando el logo mide 460px */
     letter-spacing: 0.2174cqw;
-
-
     line-height: 0.8;
-
-
     margin: 0;
 }
 
 
-
-
-/* APELLIDOS */
-.last-name {
+.apellido {
     font-family: "Times New Roman", Times, serif;
-
-
-    /* 18px cuando el logo mide 460px */
     font-size: 3.9130cqw;
-
-
-    /* 2px cuando el logo mide 460px */
     letter-spacing: 0.4348cqw;
-
-
     line-height: 1;
-
-
     font-weight: normal;
 }
 
-
-
-
-/* DIANA */
 .diana {
     align-items: flex-start;
     text-align: left;
-
-
-    /* 30px cuando el logo mide 460px */
     margin-left: 6.5217cqw;
-
-
     animation: juntarDiana 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-
-
-
 .diana .last-name {
-    /* 4px cuando el logo mide 460px */
     margin-top: 0.8696cqw;
-
-
     padding-right: 0.8696cqw;
 }
 
-
-
-
-/* CRISTIAN */
 .cristian {
     align-items: flex-end;
     text-align: right;
-
-
-    /* 10px cuando el logo mide 460px */
     margin-top: 2.1739cqw;
-
-
-    /* 40px cuando el logo mide 460px */
     margin-right: 8.6957cqw;
-
-
     animation: juntarCristian 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-
-
-
 .cristian .last-name {
-    /* 4px cuando el logo mide 460px */
     margin-top: 0.8696cqw;
-
-
     padding-right: 0.8696cqw;
 }
 
-
-
 .connector-y {
     font-family: "Brittany Signature", cursive;
-
-
-    /* 60px cuando el logo mide 460px */
     font-size: 13.0435cqw;
-
-
     font-weight: normal;
     position: absolute;
-
-
-    /* Posición horizontal */
     right: 27%;
-
-
-    /* Subimos bastante la "y" */
     top: -8.6957cqw;
     margin-top: 0;
-
-
     z-index: 5;
     color: #548235;
-
-
     opacity: 0;
     animation: aparecerY 2s ease forwards 0.8s;
 }
 
-
-
-/* ANIMACIÓN DE DIANA */
 @keyframes juntarDiana {
     from {
         opacity: 0;
         transform: translateX(-32.6087cqw);
     }
-
-
     to {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
-
-
-
-/* ANIMACIÓN DE CRISTIAN */
 @keyframes juntarCristian {
     from {
         opacity: 0;
         transform: translateX(32.6087cqw);
     }
-
-
     to {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
-
-
-
-/* APARICIÓN DE LA "y" */
 @keyframes aparecerY {
     from {
         opacity: 0;
     }
-
-
     to {
         opacity: 1;
     }
