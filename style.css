@@ -221,7 +221,7 @@ main {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    padding: 5px 25px;
+    padding: 30px 25px 5px;
     box-sizing: border-box;
     animation: subir 1.2s ease-out both;
 }
@@ -1759,6 +1759,7 @@ main {
 
 /* CONFIRMACIÓN DE ASISTENCIA CONFIRMACIÓN DE ASISTENCIA CONFIRMACIÓN DE ASISTENCIA */
 
+/* LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO  */
 
 .logo-seccion {
     width: 100%;
@@ -1874,3 +1875,5 @@ main {
         opacity: 1;
     }
 }
+
+/* LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO  */
