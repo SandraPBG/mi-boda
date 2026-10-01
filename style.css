@@ -1763,7 +1763,7 @@ main {
 
 .logo-seccion {
     width: 100%;
-    min-height: 35vh;
+   /* min-height: 35vh; */
     display: flex;
     justify-content: center;
     align-items: center;
