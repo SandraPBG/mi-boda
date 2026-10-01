@@ -584,15 +584,14 @@ main {
         margin: 0 15px;
     }
 
-   .contador {
+ 
+    .contador span {
         font-size: 26px;
         letter-spacing: 1px;
     }
-    .contador span {
-        font-size: 26px;
-    }
+    
     .contador span::after {
-        font-size: 11px;
+        font-size: 20px;
         margin-top: 4px;
     }
 
