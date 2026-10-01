@@ -257,7 +257,7 @@ main {
     text-align: center;
     width: 90%;
     max-width: 850px;
-    margin: -50px auto 0;
+    margin:20px auto 0;
     box-sizing: border-box;
     opacity: 0;
     animation: subir 1.5s ease-out forwards;
@@ -1763,14 +1763,14 @@ main {
 
 .logo-seccion {
     width: 100%;
-    min-height: 50vh;
+    min-height: 35vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
     overflow: hidden;
     box-sizing: border-box;
-    transform: translateY(-50px);
+    
 }
 
 .logo-wrapper {
