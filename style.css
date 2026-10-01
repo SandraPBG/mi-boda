@@ -257,11 +257,11 @@ main {
     text-align: center;
     width: 90%;
     max-width: 850px;
-    margin: 1px auto 0;
+    margin: -50px auto 0;
     box-sizing: border-box;
     opacity: 0;
     animation: subir 1.5s ease-out forwards;
-    
+  
 }
 
 .fuente-brittany {
@@ -1770,6 +1770,7 @@ main {
     padding: 20px;
     overflow: hidden;
     box-sizing: border-box;
+    transform: translateY(-50px);
 }
 
 .logo-wrapper {
