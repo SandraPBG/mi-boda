@@ -32,15 +32,23 @@ const intervalo = setInterval(function () {
     const contador = document.getElementById("cuenta-regresiva");
 
     if (contador) {
+        // Estructura adaptada para alimentar el CSS Grid sin romper tu div principal
         contador.innerHTML =
-            `${stringDias} : ${stringHoras} : ${stringMinutos} : ${stringSegundos}`;
+            `<span>${stringDias}</span><div class="puntos">:</div>` +
+            `<span>${stringHoras}</span><div class="puntos">:</div>` +
+            `<span>${stringMinutos}</span><div class="puntos">:</div>` +
+            `<span>${stringSegundos}</span>`;
     }
 
     if (distancia < 0) {
         clearInterval(intervalo);
 
         if (contador) {
-            contador.innerHTML = "000 : 00 : 00 : 00";
+            contador.innerHTML = 
+                `<span>000</span><div class="puntos">:</div>` +
+                `<span>00</span><div class="puntos">:</div>` +
+                `<span>00</span><div class="puntos">:</div>` +
+                `<span>00</span>`;
         }
     }
 
