@@ -443,7 +443,48 @@ main {
     padding: 30px 25px 5px;
     box-sizing: border-box;
     animation: subir 1.2s ease-out both;
+    position: relative;
+    isolation: isolate;
 }
+
+
+.primer-texto .decoracion-primer-texto {
+    position: absolute;
+    right: -100px;
+    bottom: -50px;
+    width: 24%;
+    max-width: 220px;
+    height: auto;
+    transform:scaleX(-1) rotate(60deg);
+    transform-origin: center;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+
+/* Mantener el contenido delante de la decoración */
+.primer-texto > :not(.decoracion-primer-texto) {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+    .primer-texto .decoracion-primer-texto {
+        width: 18%;
+        max-width: 145px;
+        right: -20px;
+       bottom: -10px;
+    }
+}
+
+
+
+
+
+
 
 /* PRIMER TEXTO PRIMER TEXTO PRIMER TEXTO PRIMER TEXTO */
 
@@ -491,37 +532,15 @@ main {
     width: 24%;
     max-width: 220px;
     height: auto;
-
-
     transform: rotate(45deg);
     transform-origin: center;
-
-
     z-index: 0;
     pointer-events: none;
 }
-
-
-/* El contenido queda por encima de la imagen */
 .cuenta-seccion > :not(.decoracion-cuenta) {
     position: relative;
     z-index: 1;
 }
-
-
-/* Adaptación a celulares */
-@media (max-width: 600px) {
-    .cuenta-seccion .decoracion-cuenta {
-        width: 30%;
-        max-width: 145px;
-    }
-}
-
-
-
-
-
-
 
 .texto-superior {
     font-family: "Times New Roman", Times, serif;
@@ -615,6 +634,10 @@ main {
         padding: 0 15px;
         margin-top: 80px;
     }
+     .cuenta-seccion .decoracion-cuenta {
+        width: 30%;
+        max-width: 145px;
+    }
 
     .texto-superior {
         font-size: 19px;
@@ -645,7 +668,6 @@ main {
         margin-top: 4px;
     }
   }
-
 
 /* CUENTA REGRESIVA CUENTA REGRESIVA CUENTA REGRESIVA CUENTA REGRESIVA */
 
