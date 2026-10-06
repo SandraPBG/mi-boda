@@ -474,7 +474,7 @@ main {
 @media (max-width: 600px) {
     .primer-texto .decoracion-primer-texto {
         width: 18%;
-        max-width: 145px;
+        max-width: 220px;
         right: -20px;
        bottom: -10px;
     }
