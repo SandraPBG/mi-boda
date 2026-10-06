@@ -452,7 +452,7 @@ main {
     position: absolute;
     right: 0px;
     bottom: -50px;
-    width: 24%;
+    width: 14%;
     max-width: 220px;
     height: auto;
     transform:scaleX(-1) rotate(60deg);
