@@ -126,7 +126,7 @@ body {
     margin: 0;
     padding: 0;
   
-    background-image: url('img/fondo1.png'); /* Reemplaza 'ruta-de-la-imagen.jpg' con la ruta de tu imagen */
+    background-image: url('img/fondo.png'); /* Reemplaza 'ruta-de-la-imagen.jpg' con la ruta de tu imagen */
   /*background-size: cover;       /* Hace que la imagen cubra todo el espacio */
   /* background-position: center;  /* Centra la imagen */
   /* background-repeat: no-repeat; /* Evita que la imagen se duplique */
@@ -477,7 +477,51 @@ main {
     box-sizing: border-box;
     text-align: center;
     color: #548235;
+    position: relative;
+    isolation: isolate;
 }
+
+
+
+/* Decoración de la cuenta regresiva */
+.cuenta-seccion .decoracion-cuenta {
+    position: absolute;
+    left: -50px;
+    bottom: -110px;
+    width: 24%;
+    max-width: 220px;
+    height: auto;
+
+
+    transform: rotate(45deg);
+    transform-origin: center;
+
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+/* El contenido queda por encima de la imagen */
+.cuenta-seccion > :not(.decoracion-cuenta) {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Adaptación a celulares */
+@media (max-width: 600px) {
+    .cuenta-seccion .decoracion-cuenta {
+        width: 30%;
+        max-width: 145px;
+    }
+}
+
+
+
+
+
+
 
 .texto-superior {
     font-family: "Times New Roman", Times, serif;
