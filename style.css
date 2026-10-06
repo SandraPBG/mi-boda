@@ -450,7 +450,7 @@ main {
 
 .primer-texto .decoracion-primer-texto {
     position: absolute;
-    right: -50px;
+    right: -10px;
     bottom: -50px;
     width: 24%;
     max-width: 220px;
