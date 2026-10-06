@@ -328,3 +328,35 @@ lightboxVestimenta.addEventListener(
     passive: true
   }
 );
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const elementos = document.querySelectorAll(".animar-scroll");
+
+
+    const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.remove("visible");
+
+
+                // Reinicia la animación
+                void entrada.target.offsetWidth;
+
+
+                entrada.target.classList.add("visible");
+            } else {
+                // Permite que vuelva a animarse al regresar
+                entrada.target.classList.remove("visible");
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+
+    elementos.forEach((elemento) => {
+        observador.observe(elemento);
+    });
+});
+

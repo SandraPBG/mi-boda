@@ -65,6 +65,17 @@
         transform: translateY(0);
     }
 }
+
+/* Estado inicial: elemento oculto */
+.animar-scroll {
+    opacity: 0;
+}
+
+/* Se activa cuando el elemento entra en pantalla */
+.animar-scroll.visible {
+    animation: subir 1.2s ease-out both;
+}
+
 /* ANIMACIÓN ANIMACIÓN ANIMACIÓN ANIMACIÓN ANIMACIÓN ANIMACIÓN ANIMACIÓN  */
 
 
@@ -447,7 +458,6 @@ main {
     isolation: isolate;
 }
 
-
 .primer-texto .decoracion-primer-texto {
     position: absolute;
     right: 0px;
@@ -461,29 +471,17 @@ main {
     pointer-events: none;
 }
 
-
-
-/* Mantener el contenido delante de la decoración */
 .primer-texto > :not(.decoracion-primer-texto) {
     position: relative;
     z-index: 1;
 }
 
-
-/* Ajustes para celulares */
 @media (max-width: 480px) {
     .primer-texto .decoracion-primer-texto {
         width: 30%;
         max-width: 145px;
-       
     }
 }
-
-
-
-
-
-
 
 /* PRIMER TEXTO PRIMER TEXTO PRIMER TEXTO PRIMER TEXTO */
 
@@ -508,7 +506,6 @@ main {
 
 /* CUENTA REGRESIVA CUENTA REGRESIVA CUENTA REGRESIVA CUENTA REGRESIVA */
 
-
 .cuenta-seccion {
     width: 100%;
     max-width: 850px;
@@ -521,9 +518,6 @@ main {
     isolation: isolate;
 }
 
-
-
-/* Decoración de la cuenta regresiva */
 .cuenta-seccion .decoracion-cuenta {
     position: absolute;
     left: -50px;
@@ -585,7 +579,6 @@ main {
     background-color: #548235;
     margin: 0 20px;
 }
-
 
 .contador {
     white-space: nowrap;
