@@ -125,7 +125,12 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: Georgia, serif;
+  
+    background-image: url('img/fondo1.png'); /* Reemplaza 'ruta-de-la-imagen.jpg' con la ruta de tu imagen */
+  /*background-size: cover;       /* Hace que la imagen cubra todo el espacio */
+  /* background-position: center;  /* Centra la imagen */
+   background-repeat: no-repeat; /* Evita que la imagen se duplique */
+    
 }
 
 /* CONFIGURACIÓN GENERAL CONFIGURACIÓN GENERAL CONFIGURACIÓN GENERAL CONFIGURACIÓN GENERAL */
@@ -137,6 +142,8 @@ body {
     width: 100%;
     overflow: visible; 
     margin-bottom: 80px; 
+
+    
 }
 
 .images-wrapper {
@@ -190,6 +197,7 @@ main {
     max-width: 1000px;
     margin: auto;
     padding: 80px 20px;
+  
 }
 
 /* CONTENIDO CONTENIDO CONTENIDO CONTENIDO CONTENIDO CONTENIDO CONTENIDO CONTENIDO */
@@ -199,11 +207,9 @@ main {
     .encabezado {
         height: 500px;
     }
-
     .texto-encabezado h1 {
         font-size: 42px;
     }
-
     .texto-encabezado p {
         font-size: 20px;
     }
@@ -222,7 +228,7 @@ main {
     overflow: hidden;
     box-sizing: border-box;
     transform: translateY(-30px);
-    
+  
 }
 
 .logo-wrapper {
@@ -594,7 +600,6 @@ main {
         font-size: 20px;
         margin-top: 4px;
     }
-
   }
 
 
