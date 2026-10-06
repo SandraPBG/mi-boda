@@ -473,10 +473,9 @@ main {
 /* Ajustes para celulares */
 @media (max-width: 600px) {
     .primer-texto .decoracion-primer-texto {
-        width: 18%;
+        width: 24%;
         max-width: 220px;
-        right: -20px;
-       bottom: -10px;
+       
     }
 }
 
