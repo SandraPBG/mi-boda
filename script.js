@@ -328,3 +328,27 @@ lightboxVestimenta.addEventListener(
     passive: true
   }
 );
+
+
+  const sello = document.getElementById("selloBoton");
+  const sobre = document.getElementById("sobreContenedor");
+  const logo = document.querySelector(".logo-seccion");
+
+  let abriendo = false;
+
+  sello.addEventListener("click", () => {
+
+  if (abriendo) return;
+  abriendo = true;
+  sobre.classList.add("abrir-solapa");
+
+  setTimeout(() => {
+      sobre.classList.add("difuminar");
+  }, 1000);
+
+  setTimeout(() => {
+      sobre.style.display = "none";
+      logo.classList.add("animar-logo");
+  }, 2000);
+
+  });
