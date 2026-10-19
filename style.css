@@ -529,56 +529,6 @@ main {
     z-index: 1;
 }
 
-/*fwreiguegueoiguoeirugeoige*/
-
-/* ==========================================================================
-   ESTILOS PARA LA IMAGEN O ELEMENTO DE DECORACIÓN
-   ========================================================================== */
-.codigo-vestimenta .decoracion-vestimenta {
-   position: absolute;
-    left: -50px;
-    bottom: -110px;
-    width: 24%;
-    max-width: 220px;
-    height: auto;
-    transform: rotate(45deg);
-    transform-origin: center;
-    z-index: 0;
-    pointer-events: none;
-}
-
-/* ==========================================================================
-   ESTILOS PARA EL CONTENIDO (TEXTOS, BOTONES, ETC.)
-   ========================================================================== */
-/* El selector '>' significa "hijos directos". 
-   El selector ':not()' significa "excluyendo a".
-   Por lo tanto, esta regla aplica a TODOS los hijos de '.codigo-vestimenta' EXCEPTO a '.decoracion-vestimenta'. */
-.codigo-vestimenta > :not(.decoracion-vestimenta) {
-    /* Mantiene al elemento en el flujo normal, pero le permite activar 
-       la propiedad z-index (ya que los elementos estáticos normales no la respetan). */
-    position: relative;
-
-    /* Al tener un valor de 1 (que es mayor que el z-index: 0 de la decoración), 
-       garantiza que todos los textos o contenidos queden por ENCIMA de la imagen decorativa. */
-    z-index: 1;
-}
-
-@media (max-width: 480px) {
-
-     .ubicacion .decoracion-ubicacion {
-        width: 30%;
-        max-width: 145px;
-        
-    }
-
-   
-  }
-
-
-
-/*fwreiguegueoiguoeirugeoige*/
-
-
 .texto-superior {
     font-family: "Times New Roman", Times, serif;
     font-size: 18px;
@@ -743,6 +693,27 @@ main {
     transform-box: fill-box;
     transform-origin: center;
 }
+/*gergergegergegegergegegeg */
+.ubicacion .decoracion-ubicacion {
+   position: absolute;
+    left: 350px;
+    bottom: -200px;
+    width: 15%;
+    max-width: 220px;
+    height: auto;
+    transform: rotate(200deg);
+    transform-origin: center;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.ubicacion > :not(.decoracion-ubicacion) {
+    position: relative;
+    z-index: 1;
+}
+/*gergergegergegegergegegeg */
+
+
 
 @keyframes moverPin {
 
@@ -808,9 +779,12 @@ main {
         font-size: 13.5px;
     }
 
-
     .datos-ubicacion .destacado {
         font-size: 16px;
+    }
+     .ubicacion .decoracion-ubicacion {
+        width: 30%;
+        max-width: 145px;
     }
 
 }
@@ -853,6 +827,24 @@ main {
     animation: latidoVestimenta 3s ease-in-out infinite alternate;
     transform-box: fill-box;
     transform-origin: center;
+}
+
+.codigo-vestimenta .decoracion-vestimenta {
+   position: absolute;
+    left: -50px;
+    bottom: -110px;
+    width: 35%;
+    max-width: 220px;
+    height: auto;
+    transform: rotate(45deg);
+    transform-origin: center;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.codigo-vestimenta > :not(.decoracion-vestimenta) {
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -904,6 +896,12 @@ main {
         line-height: 1.5;
         padding: 0 5px;
     }
+      .codigo-vestimenta .decoracion-vestimenta {
+        width: 30%;
+        max-width: 145px;
+    }
+   
+
 }
 
 .paleta-vestimenta {
