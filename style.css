@@ -541,11 +541,11 @@ main {
 
     /* Mueve el elemento 50 píxeles hacia la izquierda, rompiendo los márgenes 
        del contenedor (lo que hace que "sobresalga" por el borde izquierdo). */
-    left: 300px;
+    right: -50px;
 
     /* Mueve el elemento 110 píxeles hacia abajo, haciendo también que 
        sobresalga por la parte inferior del contenedor. */
-    bottom: 450px;
+    bottom: 250px;
 
     /* Define el ancho del elemento de forma fluida. Ocupará siempre 
        el 24% del ancho total que tenga su contenedor padre. */
@@ -561,7 +561,7 @@ main {
 
     /* Aplica un efecto visual de rotación. En este caso, gira el elemento 
        45 grados en el sentido de las agujas del reloj. */
-    transform: rotate(-180deg);
+    transform: rotate(90deg) scaleY(-1);
 
     /* Establece el punto de eje sobre el cual va a girar el elemento. 
        Al ser 'center', gira exactamente sobre su propio centro (como una rueda). */
@@ -597,6 +597,7 @@ main {
      .ubicacion .decoracion-ubicacion {
         width: 30%;
         max-width: 145px;
+        
     }
 
    
