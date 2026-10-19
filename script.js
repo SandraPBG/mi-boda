@@ -329,26 +329,23 @@ lightboxVestimenta.addEventListener(
   }
 );
 
+const sello = document.getElementById("selloBoton");
+const sobre = document.getElementById("sobreContenedor");
+const logo = document.querySelector(".logo-seccion");
 
-  const sello = document.getElementById("selloBoton");
-  const sobre = document.getElementById("sobreContenedor");
-  const logo = document.querySelector(".logo-seccion");
+let abriendo = false;
 
-  let abriendo = false;
-
-  sello.addEventListener("click", () => {
-
+sello.addEventListener("click", () => {
   if (abriendo) return;
   abriendo = true;
   sobre.classList.add("abrir-solapa");
 
   setTimeout(() => {
-      sobre.classList.add("difuminar");
-  }, 1000);
+    sobre.classList.add("difuminar");
+  }, 3000);
 
   setTimeout(() => {
-      sobre.style.display = "none";
-      logo.classList.add("animar-logo");
-  }, 2000);
-
-  });
+    sobre.style.display = "none";
+    logo.classList.add("animar-logo");
+  }, 4000);
+});
