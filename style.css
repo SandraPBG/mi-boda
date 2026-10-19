@@ -696,10 +696,10 @@ main {
 /*gergergegergegegergegegeg */
 .ubicacion .decoracion-ubicacion {
    position: absolute;
-    left: 350px;
-    bottom: -200px;
+    left: 300px;
+    bottom: -160px;
     width: 15%;
-    max-width: 220px;
+    max-width: 65px;
     height: auto;
     transform: rotate(200deg);
     transform-origin: center;
@@ -783,8 +783,8 @@ main {
         font-size: 16px;
     }
      .ubicacion .decoracion-ubicacion {
-        width: 15%;
-        max-width: 145px;
+        width: 10%;
+        max-width: 65px;
     }
 
 }
