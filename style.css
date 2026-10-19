@@ -693,26 +693,6 @@ main {
     transform-box: fill-box;
     transform-origin: center;
 }
-/*gergergegergegegergegegeg */
-.ubicacion .decoracion-ubicacion {
-   position: absolute;
-    left: 300px;
-    bottom: -160px;
-    width: 15%;
-    max-width: 65px;
-    height: auto;
-    transform: rotate(200deg);
-    transform-origin: center;
-    z-index: 0;
-    pointer-events: none;
-}
-
-.ubicacion > :not(.decoracion-ubicacion) {
-    position: relative;
-    z-index: 1;
-}
-/*gergergegergegegergegegeg */
-
 
 
 @keyframes moverPin {
@@ -782,10 +762,7 @@ main {
     .datos-ubicacion .destacado {
         font-size: 16px;
     }
-     .ubicacion .decoracion-ubicacion {
-        width: 10%;
-        max-width: 65px;
-    }
+   
 
 }
 
