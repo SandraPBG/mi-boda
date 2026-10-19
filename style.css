@@ -534,45 +534,16 @@ main {
 /* ==========================================================================
    ESTILOS PARA LA IMAGEN O ELEMENTO DE DECORACIÓN
    ========================================================================== */
-.ubicacion .decoracion-ubicacion {
-    /* Saca al elemento del flujo normal del documento y lo posiciona 
-       con respecto a su contenedor padre más cercano que tenga posición relativa. */
-    position: absolute;
-
-    /* Mueve el elemento 50 píxeles hacia la izquierda, rompiendo los márgenes 
-       del contenedor (lo que hace que "sobresalga" por el borde izquierdo). */
-    right: -10px;
-
-    /* Mueve el elemento 110 píxeles hacia abajo, haciendo también que 
-       sobresalga por la parte inferior del contenedor. */
-    bottom: 250px;
-
-    /* Define el ancho del elemento de forma fluida. Ocupará siempre 
-       el 24% del ancho total que tenga su contenedor padre. */
+.codigo-vestimenta .decoracion-vestimenta {
+   position: absolute;
+    left: -50px;
+    bottom: -110px;
     width: 24%;
-
-    /* Pone un límite al crecimiento del elemento. No importa qué tan grande 
-       sea la pantalla, el elemento nunca medirá más de 220 píxeles de ancho. */
     max-width: 220px;
-
-    /* Hace que la altura se calcule automáticamente en base al ancho. 
-       Esto es vital para que las imágenes no se distorsionen ni se estiren. */
     height: auto;
-
-    /* Aplica un efecto visual de rotación. En este caso, gira el elemento 
-       45 grados en el sentido de las agujas del reloj. */
-    transform: rotate(90deg) scaleY(-1);
-
-    /* Establece el punto de eje sobre el cual va a girar el elemento. 
-       Al ser 'center', gira exactamente sobre su propio centro (como una rueda). */
+    transform: rotate(45deg);
     transform-origin: center;
-
-    /* Controla la profundidad en capas (eje Z). Al poner un valor de 0, 
-       se asegura de quedar al fondo o por debajo de otros elementos con z-index mayor. */
     z-index: 0;
-
-    /* Desactiva cualquier interacción del mouse (clicks, hovers). Si el usuario 
-       hace click sobre esta decoración, el click pasará de largo y tocará lo que esté atrás. */
     pointer-events: none;
 }
 
@@ -581,8 +552,8 @@ main {
    ========================================================================== */
 /* El selector '>' significa "hijos directos". 
    El selector ':not()' significa "excluyendo a".
-   Por lo tanto, esta regla aplica a TODOS los hijos de '.ubicacion' EXCEPTO a '.decoracion-ubicacion'. */
-.ubicacion > :not(.decoracion-ubicacion) {
+   Por lo tanto, esta regla aplica a TODOS los hijos de '.codigo-vestimenta' EXCEPTO a '.decoracion-vestimenta'. */
+.codigo-vestimenta > :not(.decoracion-vestimenta) {
     /* Mantiene al elemento en el flujo normal, pero le permite activar 
        la propiedad z-index (ya que los elementos estáticos normales no la respetan). */
     position: relative;
