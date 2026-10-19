@@ -541,7 +541,7 @@ main {
 
     /* Mueve el elemento 50 píxeles hacia la izquierda, rompiendo los márgenes 
        del contenedor (lo que hace que "sobresalga" por el borde izquierdo). */
-    right: -50px;
+    right: -10px;
 
     /* Mueve el elemento 110 píxeles hacia abajo, haciendo también que 
        sobresalga por la parte inferior del contenedor. */
