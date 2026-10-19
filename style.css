@@ -1824,8 +1824,25 @@ main {
   font-weight: normal;
   line-height: 1;
   margin: 5px 0 30px;
-
   animation: confirmacionSubir 1.2s ease-out both;
+}
+
+.confirmacion-container .decoracion-confirmacion {
+   position: absolute;
+    left: -50px;
+    bottom: -110px;
+    width: 35%;
+    max-width: 220px;
+    height: auto;
+    transform: rotate(45deg);
+    transform-origin: center;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.confirmacion-container > :not(.decoracion-confirmacion) {
+    position: relative;
+    z-index: 1;
 }
 
 .icono-calendario {
@@ -1999,6 +2016,10 @@ main {
   .frase-espera {
     font-size: 18px;
   }
+   .confirmacion-container .decoracion-confirmacion {
+        width: 30%;
+        max-width: 145px;
+    }
 }
 
 /* CONFIRMACIÓN DE ASISTENCIA CONFIRMACIÓN DE ASISTENCIA CONFIRMACIÓN DE ASISTENCIA */
