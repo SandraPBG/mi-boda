@@ -328,7 +328,7 @@ lightboxVestimenta.addEventListener(
     passive: true
   }
 );
-
+/*
 const sello = document.getElementById("selloBoton");
 const sobre = document.getElementById("sobreContenedor");
 const logo = document.querySelector(".logo-seccion");
@@ -349,3 +349,43 @@ sello.addEventListener("click", () => {
     logo.classList.add("animar-logo");
   }, 4000);
 });
+*/
+
+const sello = document.getElementById("selloBoton");
+const sobre = document.getElementById("sobreContenedor");
+const logo = document.querySelector(".logo-seccion");
+
+const musica = document.getElementById("musicaBoda");
+const botonMusica = document.getElementById("botonMusica");
+
+let abriendo = false;
+
+// Abrir el sobre y comenzar la música
+sello.addEventListener("click", () => {
+    if (abriendo) return;
+    abriendo = true;
+
+    // Intentar reproducir la canción al tocar el sello
+    if (musica) {
+        musica.play().catch(error => {
+            console.warn("No se pudo iniciar la música automáticamente.", error);
+        });
+    }
+
+    // Mantener la animación original del sobre
+    sobre.classList.add("abrir-solapa");
+
+    setTimeout(() => {
+        sobre.classList.add("difuminar");
+    }, 3000);
+
+    setTimeout(() => {
+        sobre.style.display = "none";
+
+        if (logo) {
+            logo.classList.add("animar-logo");
+        }
+    }, 4000);
+});
+
+
