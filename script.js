@@ -1,3 +1,5 @@
+/* CUENTA REGRESIVA */
+
 const fechaObjetivo = new Date("April 24, 2027 17:00:00").getTime();
 
 const intervalo = setInterval(function () {
@@ -32,7 +34,7 @@ const intervalo = setInterval(function () {
     const contador = document.getElementById("cuenta-regresiva");
 
     if (contador) {
-        // Estructura adaptada para alimentar el CSS Grid sin romper tu div principal
+       
         contador.innerHTML =
             `<span>${stringDias}</span><div class="puntos">:</div>` +
             `<span>${stringHoras}</span><div class="puntos">:</div>` +
@@ -60,12 +62,8 @@ const intervalo = setInterval(function () {
 
 const fotosVestimenta = [
 
-  "img/carrusel1.jpeg",
-
-  "img/carrusel2.jpeg",
-
-  "img/carrusel3.jpeg"
-
+  "img/ellas.jpg",
+  "img/ellos.jpg",
 ];
 
 let fotoActual = 0;
@@ -91,9 +89,6 @@ const fotoSiguiente =
 const indicadoresVestimenta =
   document.getElementById("indicadoresVestimenta");
 
-
-/* CREAR INDICADORES */
-
 fotosVestimenta.forEach((foto, indice) => {
 
   const punto =
@@ -111,7 +106,6 @@ fotosVestimenta.forEach((foto, indice) => {
     punto
   );
 });
-
 
 function mostrarFoto(
   indice,
@@ -160,8 +154,6 @@ function mostrarFoto(
   });
 }
 
-
-
 abrirVestimenta.addEventListener(
   "click",
   () => {
@@ -175,10 +167,8 @@ abrirVestimenta.addEventListener(
       "derecha"
     );
 
-
     document.body.style.overflow =
       "hidden";
-
   }
 );
 
@@ -197,7 +187,6 @@ cerrarVestimenta.addEventListener(
   cerrarLightbox
 );
 
-
 fotoAnterior.addEventListener(
   "click",
   () => {
@@ -213,7 +202,6 @@ fotoAnterior.addEventListener(
       fotoActual,
       "derecha"
     );
-
   }
 );
 
@@ -235,7 +223,6 @@ fotoSiguiente.addEventListener(
 
   }
 );
-
 
 lightboxVestimenta.addEventListener(
   "click",
@@ -281,7 +268,6 @@ document.addEventListener(
     ) {
       fotoSiguiente.click();
     }
-
   }
 );
 
@@ -322,34 +308,14 @@ lightboxVestimenta.addEventListener(
 
       fotoAnterior.click();
     }
-
   },
   {
     passive: true
   }
 );
-/*
-const sello = document.getElementById("selloBoton");
-const sobre = document.getElementById("sobreContenedor");
-const logo = document.querySelector(".logo-seccion");
 
-let abriendo = false;
 
-sello.addEventListener("click", () => {
-  if (abriendo) return;
-  abriendo = true;
-  sobre.classList.add("abrir-solapa");
-
-  setTimeout(() => {
-    sobre.classList.add("difuminar");
-  }, 3000);
-
-  setTimeout(() => {
-    sobre.style.display = "none";
-    logo.classList.add("animar-logo");
-  }, 4000);
-});
-*/
+/* ABRIR SOBRE Y REPRODUCIR MÚSICA */
 
 const sello = document.getElementById("selloBoton");
 const sobre = document.getElementById("sobreContenedor");

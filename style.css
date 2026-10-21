@@ -52,24 +52,6 @@
 /* BOTON BOTON BOTON BOTON BOTON BOTON BOTON BOTON BOTON BOTON */
 
 
-/* ANIMACIÓN ANIMACIÓN ANIMACIÓN ANIMACIÓN ANIMACIÓN ANIMACIÓN ANIMACIÓN  */
-
-@keyframes subir {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* ANIMACIÓN ANIMACIÓN ANIMACIÓN ANIMACIÓN ANIMACIÓN ANIMACIÓN ANIMACIÓN  */
-
-
 /* TITULOS TITULOS TITULOS TITULOS TITULOS TITULOS */
 
 .titulo {
@@ -109,7 +91,6 @@
         font-size: 42px;
         margin-top: 7px;
     }
-
 }
 
 /* TITULOS TITULOS TITULOS TITULOS TITULOS TITULOS */
@@ -127,16 +108,242 @@ html {
 body {
     margin: 0;
     padding: 0;
-  
-    background-image: url('img/fondo.png'); /* Reemplaza 'ruta-de-la-imagen.jpg' con la ruta de tu imagen */
-  /*background-size: cover;       /* Hace que la imagen cubra todo el espacio */
-  /* background-position: center;  /* Centra la imagen */
-  /* background-repeat: no-repeat; /* Evita que la imagen se duplique */
-    
+    background-image: url('img/fondo.png'); 
 }
 
 /* CONFIGURACIÓN GENERAL CONFIGURACIÓN GENERAL CONFIGURACIÓN GENERAL CONFIGURACIÓN GENERAL */
 
+
+/* SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE */
+
+.pantalla-sobre {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 100;
+  perspective: 1500px;
+  transition:
+    opacity 1s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 1s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  isolation: isolate;
+}
+
+.pantalla-sobre::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 45px rgba(20, 28, 13, 0.16),
+    inset 0 0 120px rgba(20, 28, 13, 0.08);
+}
+
+.cara-triangulo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #548235;
+  background-image: url("img/sobre1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+  box-shadow: inset 0 0 60px rgba(30, 40, 20, 0.12);
+}
+
+.triangulo-superior {
+  clip-path: polygon(0 0, 100% 0, 50% 50%);
+  transform-origin: top center;
+  z-index: 4;
+  background-image:
+    linear-gradient(
+        to bottom,
+        rgba(238, 242, 218, 0.12),
+        rgba(41, 57, 27, 0.12)
+    ),
+    url("img/sobre1.png");
+  background-position: center;
+  background-size: cover;
+  filter: drop-shadow(0 7px 9px rgba(26, 36, 17, 0.25));
+  transition: transform 3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.triangulo-superior::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: rgba(241, 239, 215, 0.32);
+  box-shadow: 0 2px 5px rgba(30, 40, 20, 0.12);
+}
+
+.triangulo-inferior {
+  clip-path: polygon(0 100%, 100% 100%, 50% 50%);
+  transform-origin: bottom center; 
+  z-index: 3;
+  background-image:
+    linear-gradient(
+        to top,
+        rgba(28, 43, 17, 0.22),
+        rgba(230, 236, 210, 0.05)
+    ),
+    url("img/sobre1.png");
+  background-position: center;
+  background-size: cover;
+  transition: transform 3s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.triangulo-izquierdo {
+  clip-path: polygon(0 0, 0 100%, 50% 50%);
+  transform-origin: left center;
+  z-index: 2;
+  background-image:
+    linear-gradient(
+        to right,
+        rgba(224, 232, 202, 0.08),
+        rgba(35, 51, 23, 0.18)
+    ),
+    url("img/sobre1.png");
+  background-position: center;
+  background-size: cover;
+  transition: transform 3s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.triangulo-derecho {
+  clip-path: polygon(100% 0, 100% 100%, 50% 50%);
+  transform-origin: right center; 
+  z-index: 2;
+  background-image:
+    linear-gradient(
+        to left,
+        rgba(224, 232, 202, 0.06),
+        rgba(35, 51, 23, 0.16)
+    ),
+    url("img/sobre1.png");
+  background-position: center;
+  background-size: cover;
+  transition: transform 3s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.triangulo-inferior::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+        135deg,
+        transparent 48.8%,
+        rgba(35, 48, 23, 0.18) 49.7%,
+        rgba(241, 240, 217, 0.18) 50%,
+        transparent 51%
+    );
+  pointer-events: none;
+}
+
+.boton-sello {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: auto;
+  cursor: pointer;
+  width: clamp(400px, 18vw, 170px);
+  aspect-ratio: 1 / 1;
+  background-image: url("img/sello.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent; 
+  border: none;
+  border-radius: 0;
+  outline: none;
+  transition:
+      opacity 0.5s ease,
+      transform 0.4s ease;
+}
+
+.boton-sello::before {
+  content: "";
+  position: absolute;
+  top: 9%;
+  left: 17%;
+  width: 38%;
+  height: 17%;
+  border-radius: 50%;
+  transform: rotate(-30deg);
+  filter: blur(3px);
+  pointer-events: none;
+}
+
+.boton-sello:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.boton-sello:focus-visible {
+  outline: none;
+}
+
+.pantalla-sobre.abrir-solapa .triangulo-superior {
+  transform: rotateX(120deg);
+}
+
+.pantalla-sobre.abrir-solapa .triangulo-inferior {
+  transform: rotateX(-120deg);
+}
+
+.pantalla-sobre.abrir-solapa .triangulo-izquierdo {
+  transform: rotateY(-120deg);
+}
+
+.pantalla-sobre.abrir-solapa .triangulo-derecho {
+  transform: rotateY(120deg);
+}
+
+.pantalla-sobre.abrir-solapa .boton-sello {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.pantalla-sobre.difuminar {
+  opacity: 0;
+  filter: blur(20px); 
+}
+
+@media (max-width: 768px) {
+  .boton-sello {
+    width: clamp(300px, 18vw, 135px);
+  }
+  .pantalla-sobre::after {
+    box-shadow: inset 0 0 25px rgba(20, 28, 13, 0.14);
+  }
+  .seccion-contenido h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pantalla-sobre,
+  .triangulo-superior,
+  .triangulo-inferior,
+  .triangulo-izquierdo,
+  .triangulo-derecho,
+  .boton-sello {
+    transition-duration: 0.01ms;
+  }
+}
+
+/* SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE */
 
 /* ENCABEZADO ENCABEZADO ENCABEZADO ENCABEZADO ENCABEZADO */
 
@@ -144,8 +351,6 @@ body {
     width: 100%;
     overflow: visible; 
     margin-bottom: 80px; 
-
-    
 }
 
 .images-wrapper {
@@ -218,7 +423,7 @@ main {
 
 }
 
-/* LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO  */
+/* LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO */
 
   .logo-seccion {
   width: 100%;
@@ -359,7 +564,7 @@ main {
   animation-delay: 0ms;
   }
   }
-/* LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO  */
+/* LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO  */
 
 
 /* TEXTO DE INVITACIÓN TEXTO DE INVITACIÓN TEXTO DE INVITACIÓN TEXTO DE INVITACIÓN */
@@ -374,9 +579,6 @@ main {
     max-width: 850px;
     margin:20px auto 0;
     box-sizing: border-box;
-    opacity: 0;
-    animation: subir 1.5s ease-out forwards;
-  
 }
 
 .fuente-brittany {
@@ -465,7 +667,7 @@ main {
     margin: 30px auto;
     padding: 30px 25px 5px;
     box-sizing: border-box;
-    animation: subir 1.2s ease-out both;
+   
     position: relative;
     isolation: isolate;
 }
@@ -534,7 +736,6 @@ main {
     font-size: 18px;
     line-height: 1.8;
     margin-bottom: 45px;
-    animation: subir 1.5s ease-out both;
 }
 
 .info-bloque {
@@ -668,7 +869,7 @@ main {
     box-sizing: border-box;
     text-align: center;
     color: #548235;
-    animation: subir 1.5s ease-out both;
+  
 }
 
 .icono-ubicacion {
@@ -693,7 +894,6 @@ main {
     transform-box: fill-box;
     transform-origin: center;
 }
-
 
 @keyframes moverPin {
 
@@ -762,8 +962,6 @@ main {
     .datos-ubicacion .destacado {
         font-size: 16px;
     }
-   
-
 }
 
 /* UBICACIÓN UBICACIÓN UBICACIÓN UBICACIÓN UBICACIÓN UBICACIÓN */
@@ -780,7 +978,6 @@ main {
     box-sizing: border-box;
     text-align: center;
     color: #548235;
-    animation: subir 1.5s ease-out both;
 }
 
 .icono-vestimenta {
@@ -823,7 +1020,6 @@ main {
     position: relative;
     z-index: 1;
 }
-
 
 @keyframes latidoVestimenta {
     from {
@@ -877,8 +1073,6 @@ main {
         width: 30%;
         max-width: 145px;
     }
-   
-
 }
 
 .paleta-vestimenta {
@@ -988,7 +1182,6 @@ main {
     background-color: #ded006;
 }
 
-
 @media (max-width: 480px) {
     .paleta-vestimenta {
         margin-top: 60px;
@@ -1031,12 +1224,10 @@ main {
   overflow: hidden;
 }
 
-
 .lightbox-vestimenta.activo {
   display: flex;
   animation: aparecerLightbox 0.35s ease-out forwards;
 }
-
 
 @keyframes aparecerLightbox {
   from {
@@ -1046,7 +1237,6 @@ main {
     opacity: 1;
   }
 }
-
 
 .lightbox-contenido {
   width: 100%;
@@ -1082,7 +1272,6 @@ main {
   will-change: transform, opacity;
 }
 
-
 .lightbox-vestimenta.activo
 .lightbox-foto-contenedor img {
   animation: zoomEntrada 0.50s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -1101,7 +1290,6 @@ main {
     opacity: 1;
     transform: scale(1);
   }
-
 }
 
 .foto-entrada-derecha {
@@ -1318,7 +1506,6 @@ main {
   }
 }
 
-
 @media (max-height: 500px) {
   .lightbox-foto-contenedor {
     width:
@@ -1336,7 +1523,6 @@ main {
     right: 8px;
   }
 }
-
 
 .lightbox-vestimenta,
 .lightbox-vestimenta * {
@@ -1361,7 +1547,6 @@ main {
   box-sizing: border-box;
   text-align: center;
   color: #548235;
-  animation: subir 1.5s ease-out both;
 }
 
 .icono-regalo {
@@ -1454,7 +1639,6 @@ main {
   font-weight: normal;
   line-height: 1;
   margin: 0 0 45px 0;
-  animation: subir 1.2s ease-out both;
 }
 
 .itinerario-lista {
@@ -1789,20 +1973,6 @@ main {
   width: 95%;
   max-width: 650px;
   margin: 0 auto;
-  animation: confirmacionSubir 1.5s ease-out forwards;
-  opacity: 0;
-}
-
-@keyframes confirmacionSubir {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .confirmacion-titulo-principal {
@@ -1824,7 +1994,6 @@ main {
   font-weight: normal;
   line-height: 1;
   margin: 5px 0 30px;
-  animation: confirmacionSubir 1.2s ease-out both;
 }
 
 .confirmacion-container .decoracion-confirmacion {
@@ -2023,243 +2192,4 @@ main {
 }
 
 /* CONFIRMACIÓN DE ASISTENCIA CONFIRMACIÓN DE ASISTENCIA CONFIRMACIÓN DE ASISTENCIA */
-
-
-/* SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE */
-.pantalla-sobre {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100vh;
-  height: 100dvh;
-  z-index: 100;
-  perspective: 1500px;
-  transition:
-    opacity 1s cubic-bezier(0.4, 0, 0.2, 1),
-    filter 1s cubic-bezier(0.4, 0, 0.2, 1);
-  pointer-events: none;
-  isolation: isolate;
-}
-
-.pantalla-sobre::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 8;
-  pointer-events: none;
-  box-shadow:
-    inset 0 0 45px rgba(20, 28, 13, 0.16),
-    inset 0 0 120px rgba(20, 28, 13, 0.08);
-}
-
-.cara-triangulo {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #548235;
-  background-image: url("img/sobre1.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  pointer-events: none;
-  box-shadow: inset 0 0 60px rgba(30, 40, 20, 0.12);
-}
-
-.triangulo-superior {
-  clip-path: polygon(0 0, 100% 0, 50% 50%);
-  transform-origin: top center;
-  z-index: 4;
-  background-image:
-    linear-gradient(
-        to bottom,
-        rgba(238, 242, 218, 0.12),
-        rgba(41, 57, 27, 0.12)
-    ),
-    url("img/sobre1.png");
-  background-position: center;
-  background-size: cover;
-  filter: drop-shadow(0 7px 9px rgba(26, 36, 17, 0.25));
-  transition: transform 3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.triangulo-superior::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 2px;
-  background: rgba(241, 239, 215, 0.32);
-  box-shadow: 0 2px 5px rgba(30, 40, 20, 0.12);
-}
-
-.triangulo-inferior {
-  clip-path: polygon(0 100%, 100% 100%, 50% 50%);
-  transform-origin: bottom center; /* MODIFICADO: Eje en la parte inferior */
-  z-index: 3;
-  background-image:
-    linear-gradient(
-        to top,
-        rgba(28, 43, 17, 0.22),
-        rgba(230, 236, 210, 0.05)
-    ),
-    url("img/sobre1.png");
-  background-position: center;
-  background-size: cover;
-  transition: transform 3s cubic-bezier(0.4, 0, 0.2, 1); /* MODIFICADO: Añadida transición */
-}
-
-.triangulo-izquierdo {
-  clip-path: polygon(0 0, 0 100%, 50% 50%);
-  transform-origin: left center; /* MODIFICADO: Eje en la izquierda */
-  z-index: 2;
-  background-image:
-    linear-gradient(
-        to right,
-        rgba(224, 232, 202, 0.08),
-        rgba(35, 51, 23, 0.18)
-    ),
-    url("img/sobre1.png");
-  background-position: center;
-  background-size: cover;
-  transition: transform 3s cubic-bezier(0.4, 0, 0.2, 1); /* MODIFICADO: Añadida transición */
-}
-
-.triangulo-derecho {
-  clip-path: polygon(100% 0, 100% 100%, 50% 50%);
-  transform-origin: right center; /* MODIFICADO: Eje en la derecha */
-  z-index: 2;
-  background-image:
-    linear-gradient(
-        to left,
-        rgba(224, 232, 202, 0.06),
-        rgba(35, 51, 23, 0.16)
-    ),
-    url("img/sobre1.png");
-  background-position: center;
-  background-size: cover;
-  transition: transform 3s cubic-bezier(0.4, 0, 0.2, 1); /* MODIFICADO: Añadida transición */
-}
-
-.triangulo-inferior::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-        135deg,
-        transparent 48.8%,
-        rgba(35, 48, 23, 0.18) 49.7%,
-        rgba(241, 240, 217, 0.18) 50%,
-        transparent 51%
-    );
-  pointer-events: none;
-}
-
-.boton-sello {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  pointer-events: auto;
-  cursor: pointer;
-  width: clamp(400px, 18vw, 170px);
-  aspect-ratio: 1 / 1;
-  background-image: url("img/sello.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent; 
-  border: none;
-  border-radius: 0;
-  outline: none;
-  transition:
-      opacity 0.5s ease,
-      transform 0.4s ease;
-}
-
-.boton-sello::before {
-  content: "";
-  position: absolute;
-  top: 9%;
-  left: 17%;
-  width: 38%;
-  height: 17%;
-  border-radius: 50%;
-  transform: rotate(-30deg);
-  filter: blur(3px);
-  pointer-events: none;
-}
-
-.boton-sello:hover {
-  transform: translate(-50%, -50%) scale(1.05);
-  box-shadow: none;
-  background-color: transparent;
-}
-
-.boton-sello:focus-visible {
-  outline: none;
-}
-
-/* ==========================================================================
-   ANIMACIÓN DE APERTURA MULTIDIRECCIONAL
-   ========================================================================== */
-
-/* Parte de arriba: Abre hacia arriba */
-.pantalla-sobre.abrir-solapa .triangulo-superior {
-  transform: rotateX(120deg);
-}
-
-/* MODIFICADO - Parte de abajo: Abre hacia abajo */
-.pantalla-sobre.abrir-solapa .triangulo-inferior {
-  transform: rotateX(-120deg);
-}
-
-/* MODIFICADO - Parte izquierda: Abre hacia la izquierda */
-.pantalla-sobre.abrir-solapa .triangulo-izquierdo {
-  transform: rotateY(-120deg);
-}
-
-/* MODIFICADO - Parte derecha: Abre hacia la derecha */
-.pantalla-sobre.abrir-solapa .triangulo-derecho {
-  transform: rotateY(120deg);
-}
-
-.pantalla-sobre.abrir-solapa .boton-sello {
-  opacity: 0;
-  pointer-events: none;
-  transform: translate(-50%, -50%) scale(0.8);
-}
-
-.pantalla-sobre.difuminar {
-  opacity: 0;
-  filter: blur(20px); /* Esto ahora difumina el contenedor completo tras 1 segundo */
-}
-
-@media (max-width: 768px) {
-  .boton-sello {
-    width: clamp(300px, 18vw, 135px);
-  }
-  .pantalla-sobre::after {
-    box-shadow: inset 0 0 25px rgba(20, 28, 13, 0.14);
-  }
-  .seccion-contenido h1 {
-    font-size: 2rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .pantalla-sobre,
-  .triangulo-superior,
-  .triangulo-inferior,
-  .triangulo-izquierdo,
-  .triangulo-derecho,
-  .boton-sello {
-    transition-duration: 0.01ms;
-  }
-}
-
-/* SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE SOBRE */
 
