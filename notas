@@ -1,0 +1,7 @@
+   <img src="img/detalle2.png" class="decoracion-confirmacion" alt="" aria-hidden="true">
+
+
+   position: relative;
+   left: -270px;
+
+    transform: rotate(clamp(-35deg, -5vw, -25deg)); 

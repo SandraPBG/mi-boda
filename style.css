@@ -859,12 +859,356 @@ main {
 /* CUENTA REGRESIVA CUENTA REGRESIVA CUENTA REGRESIVA CUENTA REGRESIVA */
 
 
+
+/* ITINERARIO ITINERARIO ITINERARIO ITINERARIO ITINERARIO ITINERARIO ITINERARIO */
+
+.itinerario-container {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 80px 20px 40px;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  color: #548235;
+  overflow: hidden;
+}
+
+.itinerario-titulo {
+  font-family: "Brittany Signature", cursive;
+  color: #548235;
+  text-align: center;
+  font-size: clamp(40px, 6vw, 56px);
+  font-weight: normal;
+  line-height: 1;
+  margin: 0 0 45px 0;
+}
+
+.itinerario-lista {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.itinerario-item {
+  display: grid;
+  grid-template-columns: 38% 2px 62%;
+  align-items: center;
+  width: 100%;
+  opacity: 0;
+  animation: eventoEntrada 1s ease-out forwards;
+}
+
+.itinerario-item:nth-child(1) {
+  animation-delay: .1s;
+}
+.itinerario-item:nth-child(2) {
+  animation-delay: .25s;
+}
+.itinerario-item:nth-child(3) {
+  animation-delay: .4s;
+}
+.itinerario-item:nth-child(4) {
+  animation-delay: .55s;
+}
+.itinerario-item:nth-child(5) {
+  animation-delay: .7s;
+}
+.itinerario-item:nth-child(6) {
+  animation-delay: .85s;
+}
+
+@keyframes eventoEntrada {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.col-icono {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  box-sizing: border-box;
+  color: #548235;
+}
+
+.wrapper-icono {
+  width: 60px;
+  height: auto;
+  display: block;
+}
+
+.wrapper-icono svg {
+  width: 100%;
+  height: auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.col-linea {
+  width: 2px;
+  height: 85px;
+  background-color: #548235;
+  justify-self: center;
+}
+
+.col-texto {
+  padding-left: 30px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.evento-nombre {
+  color: #548235;
+  font-size: clamp(18px, 3vw, 24px);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+  margin: 0 0 5px 0;
+  font-weight: normal;
+}
+
+.evento-hora {
+  color: #C46224;
+  font-size: clamp(16px, 2.5vw, 22px);
+  margin: 0;
+}
+
+.minute-hand {
+  animation:
+    spin-clockwise
+    15s
+    linear
+    infinite;
+  transform-origin:
+    50px 55px;
+}
+.hour-hand {
+  animation:
+    spin-clockwise
+    50s
+    linear
+    infinite;
+  transform-origin:
+    50px 55px;
+}
+
+@keyframes spin-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.diamond-shine {
+  animation:
+    glitter
+    2s
+    infinite
+    ease-in-out;
+  transform-origin:
+    32px 14px;
+}
+
+@keyframes glitter {
+  0%,
+  100% {
+    transform: scale(.6);
+    opacity: .2;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.bell-top {
+  animation:
+    lift-lid
+    3s
+    ease-in-out
+    infinite
+    alternate;
+  transform-origin:
+    50% 50px;
+}
+@keyframes lift-lid {
+  0%,
+  20% {
+    transform:
+      translateY(0);
+  }
+  80%,
+  100% {
+    transform:
+      translateY(-8px);
+  }
+}
+
+.groom-group {
+  animation:
+    move-groom
+    3s
+    ease-in-out
+    infinite
+    alternate;
+}
+.bride-group {
+  animation:
+    move-bride
+    3s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+@keyframes move-groom {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes move-bride {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-5px);
+  }
+}
+
+.animacion-svg {
+  width: 100%;
+  height: 100%;
+  animation:
+    sway
+    4s
+    ease-in-out
+    infinite
+    alternate;
+  transform-origin:
+    50% 10%;
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(4deg);
+  }
+}
+
+.arrow-group {
+  animation:
+    push-arrow
+    1.4s
+    infinite
+    alternate
+    ease-in-out;
+}
+
+@keyframes push-arrow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(7px);
+  }
+}
+
+@media (max-width: 480px) {
+  .itinerario-container {
+    padding: 60px 8px 35px;
+  }
+  .itinerario-titulo {
+    font-size: 42px;
+    margin-top: 7px;
+  }
+  .itinerario-lista {
+    gap: 24px;
+  }
+  .itinerario-item {
+    grid-template-columns:
+      35%
+      2px
+      65%;
+  }
+
+  .col-icono {
+    padding-right: 15px;
+  }
+
+  .wrapper-icono {
+
+    width: clamp(42px, 13vw, 55px);
+  }
+  .col-linea {
+    height:70px;
+  }
+
+  .col-texto {
+    padding-left: 15px;
+  }
+
+  .evento-nombre {
+    font-size:clamp(16px, 3.7vw, 20px);
+    letter-spacing: 1px;
+  }
+  .evento-hora {
+    font-size: clamp(12px, 3.2vw, 14px);
+  }
+}
+
+@media (max-width: 360px) {
+  .itinerario-item {
+    grid-template-columns:
+      33%
+      2px
+      67%;
+  }
+  .col-icono {
+    padding-right: 10px;
+
+  }
+  .col-texto {
+    padding-left: 12px;
+  }
+  .wrapper-icono {
+    width: 43px;
+  }
+  .evento-nombre {
+    font-size: 15px;
+  }
+  .evento-hora {
+    font-size: 13px;
+  }
+}
+
+/* ITINERARIO ITINERARIO ITINERARIO ITINERARIO ITINERARIO ITINERARIO ITINERARIO */
+
+
+
 /* UBICACIÓN UBICACIÓN UBICACIÓN UBICACIÓN UBICACIÓN UBICACIÓN */
 
 .ubicacion {
     width: 90%;
     max-width: 550px;
-    margin: 180px auto 0;
+    margin: 100px auto 0;
     padding: 0 10px;
     box-sizing: border-box;
     text-align: center;
@@ -973,7 +1317,7 @@ main {
 
     width: 90%;
     max-width: 600px;
-    margin: 160px auto 0;
+    margin: 75px auto 0;
     padding: 0 10px;
     box-sizing: border-box;
     text-align: center;
@@ -1003,16 +1347,27 @@ main {
     transform-origin: center;
 }
 
+.codigo-vestimenta {
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative; 
+}
+
 .codigo-vestimenta .decoracion-vestimenta {
-   position: absolute;
-    left: -50px;
-    bottom: -110px;
-    width: 35%;
-    max-width: 220px;
+  
+    position: absolute;
+    left: -40px;    
+    top: 50px; 
+    width: 25%;
+    max-width: 150px;    
     height: auto;
     transform: rotate(45deg);
     transform-origin: center;
-    z-index: 0;
+    z-index: 0;          
     pointer-events: none;
 }
 
@@ -1547,6 +1902,7 @@ main {
   box-sizing: border-box;
   text-align: center;
   color: #548235;
+  position: relative;
 }
 
 .icono-regalo {
@@ -1571,6 +1927,27 @@ main {
   transform-box: fill-box;
   transform-origin: center;
 }
+
+
+.seccion-regalo .decoracion-regalo {
+  
+    position: absolute;
+    left: -60px;    
+    top: 8px; 
+    width: 35%;
+    max-width: 150px;    
+    height: auto;
+    transform: rotate(350deg);
+    transform-origin: center;
+    z-index: 0;          
+    pointer-events: none;
+}
+
+.seccion-regalo > :not(.decoracion-regalo) {
+    position: relative;
+    z-index: 1;
+}
+
 
 @keyframes moverMoño {
   from {
@@ -1618,348 +1995,6 @@ main {
 /* SUGERENCIA DE REGALO SUGERENCIA DE REGALO SUGERENCIA DE REGALO SUGERENCIA DE REGALO */
 
 
-/* ITINERARIO ITINERARIO ITINERARIO ITINERARIO ITINERARIO ITINERARIO ITINERARIO */
-
-.itinerario-container {
-  width: 100%;
-  max-width: 620px;
-  margin: 0 auto;
-  padding: 80px 20px 40px;
-  box-sizing: border-box;
-  font-family: "Times New Roman", Times, serif;
-  color: #548235;
-  overflow: hidden;
-}
-
-.itinerario-titulo {
-  font-family: "Brittany Signature", cursive;
-  color: #548235;
-  text-align: center;
-  font-size: clamp(40px, 6vw, 56px);
-  font-weight: normal;
-  line-height: 1;
-  margin: 0 0 45px 0;
-}
-
-.itinerario-lista {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.itinerario-item {
-  display: grid;
-  grid-template-columns: 38% 2px 62%;
-  align-items: center;
-  width: 100%;
-  opacity: 0;
-  animation: eventoEntrada 1s ease-out forwards;
-}
-
-.itinerario-item:nth-child(1) {
-  animation-delay: .1s;
-}
-.itinerario-item:nth-child(2) {
-  animation-delay: .25s;
-}
-.itinerario-item:nth-child(3) {
-  animation-delay: .4s;
-}
-.itinerario-item:nth-child(4) {
-  animation-delay: .55s;
-}
-.itinerario-item:nth-child(5) {
-  animation-delay: .7s;
-}
-.itinerario-item:nth-child(6) {
-  animation-delay: .85s;
-}
-
-@keyframes eventoEntrada {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.col-icono {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-right: 30px;
-  box-sizing: border-box;
-  color: #548235;
-}
-
-.wrapper-icono {
-  width: 60px;
-  height: auto;
-  display: block;
-}
-
-.wrapper-icono svg {
-  width: 100%;
-  height: auto;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 3.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.col-linea {
-  width: 2px;
-  height: 85px;
-  background-color: #548235;
-  justify-self: center;
-}
-
-.col-texto {
-  padding-left: 30px;
-  box-sizing: border-box;
-  text-align: left;
-}
-
-.evento-nombre {
-  color: #548235;
-  font-size: clamp(18px, 3vw, 24px);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  line-height: 1.2;
-  margin: 0 0 5px 0;
-  font-weight: normal;
-}
-
-.evento-hora {
-  color: #C46224;
-  font-size: clamp(16px, 2.5vw, 22px);
-  margin: 0;
-}
-
-.minute-hand {
-  animation:
-    spin-clockwise
-    15s
-    linear
-    infinite;
-  transform-origin:
-    50px 55px;
-}
-.hour-hand {
-  animation:
-    spin-clockwise
-    50s
-    linear
-    infinite;
-  transform-origin:
-    50px 55px;
-}
-
-@keyframes spin-clockwise {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.diamond-shine {
-  animation:
-    glitter
-    2s
-    infinite
-    ease-in-out;
-  transform-origin:
-    32px 14px;
-}
-
-@keyframes glitter {
-  0%,
-  100% {
-    transform: scale(.6);
-    opacity: .2;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-}
-
-.bell-top {
-  animation:
-    lift-lid
-    3s
-    ease-in-out
-    infinite
-    alternate;
-  transform-origin:
-    50% 50px;
-}
-@keyframes lift-lid {
-  0%,
-  20% {
-    transform:
-      translateY(0);
-  }
-  80%,
-  100% {
-    transform:
-      translateY(-8px);
-  }
-}
-
-.groom-group {
-  animation:
-    move-groom
-    3s
-    ease-in-out
-    infinite
-    alternate;
-}
-.bride-group {
-  animation:
-    move-bride
-    3s
-    ease-in-out
-    infinite
-    alternate;
-}
-
-@keyframes move-groom {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(5px);
-  }
-}
-
-@keyframes move-bride {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-5px);
-  }
-}
-
-.animacion-svg {
-  width: 100%;
-  height: 100%;
-  animation:
-    sway
-    4s
-    ease-in-out
-    infinite
-    alternate;
-  transform-origin:
-    50% 10%;
-}
-
-@keyframes sway {
-  0% {
-    transform: rotate(-4deg);
-  }
-  100% {
-    transform: rotate(4deg);
-  }
-}
-
-.arrow-group {
-  animation:
-    push-arrow
-    1.4s
-    infinite
-    alternate
-    ease-in-out;
-}
-
-@keyframes push-arrow {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(7px);
-  }
-}
-
-@media (max-width: 480px) {
-  .itinerario-container {
-    padding: 60px 8px 35px;
-  }
-  .itinerario-titulo {
-    font-size: 42px;
-    margin-top: 7px;
-  }
-  .itinerario-lista {
-    gap: 24px;
-  }
-  .itinerario-item {
-    grid-template-columns:
-      35%
-      2px
-      65%;
-  }
-
-  .col-icono {
-    padding-right: 15px;
-  }
-
-  .wrapper-icono {
-
-    width: clamp(42px, 13vw, 55px);
-  }
-  .col-linea {
-    height:70px;
-  }
-
-  .col-texto {
-    padding-left: 15px;
-  }
-
-  .evento-nombre {
-    font-size:clamp(16px, 3.7vw, 20px);
-    letter-spacing: 1px;
-  }
-  .evento-hora {
-    font-size: clamp(12px, 3.2vw, 14px);
-  }
-}
-
-@media (max-width: 360px) {
-  .itinerario-item {
-    grid-template-columns:
-      33%
-      2px
-      67%;
-  }
-  .col-icono {
-    padding-right: 10px;
-
-  }
-  .col-texto {
-    padding-left: 12px;
-  }
-  .wrapper-icono {
-    width: 43px;
-  }
-  .evento-nombre {
-    font-size: 15px;
-  }
-  .evento-hora {
-    font-size: 13px;
-  }
-}
-
-/* ITINERARIO ITINERARIO ITINERARIO ITINERARIO ITINERARIO ITINERARIO ITINERARIO */
-
-
 /* CONFIRMACIÓN DE ASISTENCIA CONFIRMACIÓN DE ASISTENCIA CONFIRMACIÓN DE ASISTENCIA */
 
 .confirmacion-container {
@@ -1973,6 +2008,8 @@ main {
   width: 95%;
   max-width: 650px;
   margin: 0 auto;
+  position: relative;
+ overflow: hidden; 
 }
 
 .confirmacion-titulo-principal {
@@ -1997,22 +2034,18 @@ main {
 }
 
 .confirmacion-container .decoracion-confirmacion {
-   position: absolute;
-    left: -50px;
-    bottom: -10px;
-    width: 35%;
-    max-width: 220px;
+   
+    position: absolute;
+     transform:scaleX(-1) rotate(43deg);
+    right: clamp(-4px, -3vw, -15px);
+    top: clamp(100px, 8vw, 80px);
+    width: clamp(70px, 22vw, 140px);
     height: auto;
-    transform: rotate(45deg);
     transform-origin: center;
-    z-index: 0;
-    pointer-events: none;
+    z-index: 0; 
+    pointer-events: none; 
 }
 
-.confirmacion-container > :not(.decoracion-confirmacion) {
-    position: relative;
-    z-index: 1;
-}
 
 .icono-calendario {
   width: 85px;
